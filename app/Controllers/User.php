@@ -44,7 +44,6 @@ class User extends ResourceController
 	 */
 	public function create()
 	{
-		// echo('Saved');
 		helper(['form']);
 
 		$rules = [
@@ -73,7 +72,7 @@ class User extends ResourceController
 
 			$userModel->save($data);
 
-			return redirect()->to('/login');
+			return redirect()->to('/user/login/');
 		} else {
 			$data['validation'] = $this->validator;
 			return view('sign-up', $data);
@@ -82,7 +81,6 @@ class User extends ResourceController
 
 	public function login()
 	{
-		helper(['form']);
 		echo view('login');
 	}
 
@@ -94,10 +92,9 @@ class User extends ResourceController
 
 		$email = $this->request->getVar('email');
 		$password = $this->request->getVar('password');
+		$data = $userModel->asArray()->where('email', $email)->first();
 
-		$data = $userModel->where('email', $email)->first();
-
-		if ($data) {
+		if (!empty($data)) {
 			$pass = $data['password'];
 			$authenticatePassword = password_verify($password, $pass);
 			if ($authenticatePassword) {
@@ -118,11 +115,11 @@ class User extends ResourceController
 				}
 			} else {
 				$session->setFlashdata('msg', 'Password is incorrect.');
-				return redirect()->to('/login');
+				return redirect()->to('/user/login/');
 			}
 		} else {
 			$session->setFlashdata('msg', 'Email does not exist.');
-			return redirect()->to('/login');
+			return redirect()->to('/user/login/');
 		}
 	}
 

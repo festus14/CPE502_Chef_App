@@ -39,6 +39,7 @@ $routes->post('/user/auth-login/', 'User::loginAuth');
 
 // Write protected routes like this
 $routes->get('/customer', 'Customer::index', ['filter' => 'authGuard']);
+$routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------

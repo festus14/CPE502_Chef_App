@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
 
-class Chef extends ResourceController
+class Customer extends ResourceController
 {
 	/**
 	 * Return an array of resource objects, themselves in array format
