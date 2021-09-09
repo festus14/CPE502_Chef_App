@@ -7,8 +7,8 @@
     <!--  -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="my_css/style.css">
     <title>ChefCorner</title>
     
   </head>
@@ -31,8 +31,8 @@
                     <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
                   </div>
                   <div class="sidedraw-tabs">
-                      <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="sign-up.php">Join for free<span class="sr-only">(current)</span></a>
-                      <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="sign-in.php">Login</a>
+                      <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="chef-signup.html">Join for free<span class="sr-only">(current)</span></a>
+                      <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="sigin-in.html">Login</a>
                   </div>
                 </div>
             </section>
@@ -43,10 +43,10 @@
             <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="sign-up.php">Join for free</a>
+                        <a class="nav-link chefCorner-nav-atag" href="chef-signup.html">Join for free</a>
                     </li>
                     <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="sign-in.php">Sign In</a>
+                        <a class="nav-link chefCorner-nav-atag" href="sigin-in.html">Sign In</a>
                     </li>
                  
                 </ul>
@@ -113,9 +113,9 @@
       <div class="row">
           <div class="col-md-4 d-flex justify-content-center align-items-center">
               <div class="chef-product">                       
-                  <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                  <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                    
-                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.php">Fufu</a>
+                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.html">Fufu</a>
                    <div class="d-flex">
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
@@ -142,10 +142,10 @@
                           <div class="container-fluid">
                               <div class="row">
                                 <div class="col-md-5 modal-img">
-                                  <img src="/assets/images/fufu.jpg" class="rounded-0"/>
+                                  <img src="images/fufu.jpg" class="rounded-0"/>
                                 </div>
                                 <div class="col-md-7">          
-                                     <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.php">Fufu</a>
+                                     <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.html">Fufu</a>
                                           
                                      <div class="d-flex">
                                         <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
@@ -153,7 +153,7 @@
                                      </div> 
                                      <h5 class="modal-item-h5">ItemName by <span>ChefName</span></h5>
                                      <h1>$12.99</h1>
-                                     <a class="btn custom-btn buy-btn modal-item-btn" href="customer-Fufurt.php">Add to cart</a>
+                                     <a class="btn custom-btn buy-btn modal-item-btn" href="customer-Fufurt.html">Add to cart</a>
                                         
                                 </div>
                               </div>
@@ -178,8 +178,8 @@
           </div>
           <div class="col-md-4 d-flex justify-content-center align-items-center">
                <div class="chef-product">                      
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.php">Fufu</a>
+                   <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.html">Fufu</a>
                    <div class="d-flex">
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
@@ -191,8 +191,8 @@
           </div>
           <div class="col-md-4 d-flex justify-content-center align-items-center">
                <div class="chef-product">
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.php">Fufu</a>
+                   <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.html">Fufu</a>
                    <div class="d-flex">
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
@@ -205,8 +205,8 @@
 
           <div class="col-md-4 d-flex justify-content-center align-items-center">
                <div class="chef-product">
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.php">Fufu</a>
+                   <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                   <a class="chef-item-h5" style="color:#022b69;" href="customer-view-item.html">Fufu</a>
                    <div class="d-flex">
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
@@ -251,11 +251,11 @@
                      
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/my_js/index.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="my_js/index.js"></script>
   </body>
 </html>
 

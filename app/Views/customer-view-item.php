@@ -10,8 +10,8 @@
 		<!-- Bootstrap -->
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -20,7 +20,7 @@
 		<!-- NAV SECTION -->
 		<nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
 			<div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-				<a class="navbar-brand logo" href="/assets/#">ChefCorner</a>
+				<a class="navbar-brand logo" href="#">ChefCorner</a>
 				<section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
 					<div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
 					<div class="sidedraw-wrapper">
@@ -29,8 +29,8 @@
 							<button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
 						</div>
 						<div class="sidedraw-tabs">
-							<a class="sidedraw-nav-link chefCorner-sidedraw-join" href="/assets/#">Join for free<span class="sr-only">(current)</span></a>
-							<a class="sidedraw-nav-link chefCorner-sidedraw-login" href="/assets/#">Login</a>
+							<a class="sidedraw-nav-link chefCorner-sidedraw-join" href="#">Join for free<span class="sr-only">(current)</span></a>
+							<a class="sidedraw-nav-link chefCorner-sidedraw-login" href="#">Login</a>
 						</div>
 					</div>
 				</section>
@@ -40,7 +40,7 @@
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto topnav">
 						<li class="nav-item chefCorner-nav-item">
-							<a class="nav-link chefCorner-nav-atag" href="/assets/#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+							<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
 						</li>
 					</ul>
 				</div>
@@ -55,7 +55,7 @@
 				<div class="container">
 					<div class="row" style="margin-top:30px;">
 						<div class="col-md-5 modal-img">
-							<img src="/assets/images/thekids.jpg" style="border-radius:0px;"/>
+							<img src="images/thekids.jpg" style="border-radius:0px;"/>
 						</div>
 						<div class="col-md-7">
 							<h2 style="font-weight:bold;">Cake</h2>
@@ -65,7 +65,7 @@
 							</div>
 							<h5 class="m-0" style="font-weight: normal;">OrderByClientUsername</h5>
 							<h1>$40</h1>
-							<a class="btn custom-btn buy-btn" href="/assets/" style="padding: 3px 10%;margin-top:3px">Add to cart</a>
+							<a class="btn custom-btn buy-btn" href="" style="padding: 3px 10%;margin-top:3px">Add to cart</a>
 						</div>
 					</div>
 					<div class="row pl-0 pt-5">
@@ -121,14 +121,14 @@
 				<div class="container">
 					<div class="row footer">
 						<div class="col-md-2 ft footer-logo">
-							<a href="/assets/">ChefCorner</a>
+							<a href="">ChefCorner</a>
 						</div>
 						<div class="col-md-5 ft m-auto">
 							<ul class="footer-tab">
-								<li><a href="/assets/#">Help</a> </li>
-								<li><a href="/assets/#">About</a></li>
-								<li><a href="/assets/#">Price</a></li>
-								<li><a href="/assets/#">Blog</a></li>
+								<li><a href="#">Help</a> </li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Price</a></li>
+								<li><a href="#">Blog</a></li>
 							</ul>
 						</div>
 						<div class="col-md-5 ft m-auto">
@@ -144,10 +144,10 @@
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+		<script src="my_js/jquery-3.4.1.slim.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-		<script src="/assets/my_js/index.js"></script>
+		<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+		<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="my_js/index.js"></script>
 	</body>
 </html>
