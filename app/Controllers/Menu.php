@@ -15,8 +15,7 @@ class Menu extends ResourceController
      */
     public function index()
     {
-        $session = session();
-		echo "Hello : " . $session->get('first_name') . $session->get('other_names');
+        return view('create-menu');
     }
 
     /**
@@ -53,7 +52,7 @@ class Menu extends ResourceController
 			'description' => 'required|min_length[2]|max_length[200]',
 			'item_category' => 'required|min_length[2]|max_length[50]',
 			'quantity' => 'required',
-			'cover' => 'required',
+			'uploadProduct' => 'required',
 			'price' => 'required',
             'is_discount' => 'required',
             'discount' => 'required',
@@ -68,6 +67,7 @@ class Menu extends ResourceController
 				'item_category' => $this->request->getVar('item_category'),
 				'quantity' => $this->request->getVar('quantity'),
 				'cover' => $this->request->getVar('cover'),
+				'price' => $this->request->getVar('price'),
 				'is_discount' => $this->request->getVar('is_discount'),
 				'discount' => $this->request->getVar('discount'),
 				'chef_id' => $session->get('id'),

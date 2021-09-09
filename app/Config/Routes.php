@@ -40,6 +40,12 @@ $routes->post('/user/auth-login/', 'User::loginAuth');
 // Write protected routes like this
 $routes->get('/customer', 'Customer::index', ['filter' => 'authGuard']);
 $routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
+//menu
+$routes->get('/menu', 'Menu::index');
+$routes->post('/menu/create', 'Menu::create');
+
+$routes->get('/recipe', 'Recipe::index');
+$routes->get('/order', 'Order::index');
 
 /*
  * --------------------------------------------------------------------
