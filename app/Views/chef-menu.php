@@ -22,12 +22,12 @@
   <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
     <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
       <div class="navbar-brand ">
-        <a  class="logo" href="/assets/#">ChefCorner</a>
+        <a  class="logo" href="#">ChefCorner</a>
       </div>
       <div class="mt-2">
         <ul class="navbar-nav ml-auto topnav">
           <li class="nav-item chefCorner-nav-item ">
-            <a class="nav-link chefCorner-nav-atag" href="/assets/#">Username <i class="pl-1 fa fa-user-circle"></i></a>
+            <a class="nav-link chefCorner-nav-atag" href="#">Username <i class="pl-1 fa fa-user-circle"></i></a>
           </li>
         </ul>
       </div>
@@ -42,13 +42,13 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="/assets/chef-menu.html">Menu</a>
+                  <a class="nav-link" href="chef-menu.html">Menu</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="/assets/chef-order.html">Orders</a>
+                  <a class="nav-link" href="chef-order.html">Orders</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="/assets/">Recicipes</a>
+                  <a class="nav-link" href="">Recicipes</a>
                 </li>
               </ul>
 
@@ -129,7 +129,7 @@
     <div class="row m-5 px-5">
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         
         <div class="d-block m-2">
@@ -149,7 +149,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -169,7 +169,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -190,14 +190,14 @@
       <div class="container">
         <div class="row footer">
           <div class="col-md-2 ft footer-logo">
-            <a href="/assets/">ChefCorner</a>
+            <a href="">ChefCorner</a>
           </div>
           <div class="col-md-5 ft m-auto">
             <ul class="footer-tab">
-              <li><a href="/assets/">Help</a> </li>
-              <li><a href="/assets/">About</a></li>
-              <li><a href="/assets/">Price</a></li>
-              <li><a href="/assets/">Blog</a></li>
+              <li><a href="">Help</a> </li>
+              <li><a href="">About</a></li>
+              <li><a href="">Price</a></li>
+              <li><a href="">Blog</a></li>
             </ul>
           </div>
 
@@ -211,11 +211,11 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-  <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+  <script src="my_js/jquery-3.4.1.slim.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-  <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/my_js/index.js"></script>
+  <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="my_js/index.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
   <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-      <a class="navbar-brand logo" href="/assets/#">ChefCorner</a>
+      <a class="navbar-brand logo" href="#">ChefCorner</a>
        
       <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
           <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
@@ -30,8 +30,8 @@
               <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
             </div>
             <div class="sidedraw-tabs">
-                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="/assets/chef-signup.html">Join for free<span class="sr-only">(current)</span></a>
-                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="/assets/sigin-in.html">Login</a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="chef-signup.html">Join for free<span class="sr-only">(current)</span></a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="sigin-in.html">Login</a>
             </div>
           </div>
       </section>
@@ -43,7 +43,7 @@
           <ul class="navbar-nav ml-auto topnav">
             
                <li class="nav-item chefCorner-nav-item ">
-                  <a class="nav-link chefCorner-nav-atag" href="/assets/#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+                  <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
               </li>
            
           </ul>
@@ -59,13 +59,13 @@
                 <div class="row flex-nowrap">
                    <ul class="nav nav-pills mb-3 -container" >
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="/assets/customer-dashboard.html">Menu</a>
+                      <a class="nav-link" href="customer-dashboard.html">Menu</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="/assets/customer-cart.html">Cart</a>
+                      <a class="nav-link" href="customer-cart.html">Cart</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="/assets/order-records.html">Order record</a>
+                      <a class="nav-link" href="order-records.html">Order record</a>
                     </li>
                   </ul>
                   
@@ -123,7 +123,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <div class="chef-product">                       
-                        <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                        <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -148,14 +148,14 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                       <div class="col-md-5 modal-img">
-                                        <img src="/assets/images/fufu.jpg" class="rounded-0"/>
+                                        <img src="images/fufu.jpg" class="rounded-0"/>
                                       </div>
                                       <div class="col-md-7">          
                                            <h2 class="modal-item-h2">Art of war</h2>
                                            <h6 class="modal-item-h6">Literature</span></h6>
                                            <h5 class="modal-item-h5">By <span>sun Tzu. 2020</span></h5>
                                            <h1>$40</h1>      
-                                           <a class="btn custom-btn buy-btn modal-item-btn" href="/assets/">Add to cart</a>
+                                           <a class="btn custom-btn buy-btn modal-item-btn" href="">Add to cart</a>
                                               
                                       </div>
                                     </div>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">                      
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
                          <h6>Order by <span>Shola</span></h6>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o p-1"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -211,7 +211,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -230,14 +230,14 @@
      <div class="container">
           <div class="row footer">
               <div class="col-md-2 ft footer-logo">
-                <a href="/assets/">ChefCorner</a>
+                <a href="">ChefCorner</a>
               </div>
               <div class="col-md-5 ft m-auto">
                 <ul class="footer-tab">
-                    <li><a href="/assets/">Help</a> </li>
-                    <li><a href="/assets/">About</a></li>
-                    <li><a href="/assets/">Price</a></li>
-                    <li><a href="/assets/">Blog</a></li>
+                    <li><a href="">Help</a> </li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Price</a></li>
+                    <li><a href="">Blog</a></li>
                   </ul>
               </div>
             
@@ -252,10 +252,10 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/my_js/index.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="my_js/index.js"></script>
   </body>
 </html>

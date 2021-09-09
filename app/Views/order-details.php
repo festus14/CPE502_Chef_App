@@ -18,7 +18,7 @@
   <body>
 <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
   <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-      <a class="navbar-brand logo" href="/assets/#">ChefCorner</a>
+      <a class="navbar-brand logo" href="#">ChefCorner</a>
       
       <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
           <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
@@ -30,8 +30,8 @@
               <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
             </div>
             <div class="sidedraw-tabs">
-                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="/assets/#">Join for free<span class="sr-only">(current)</span></a>
-                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="/assets/#">Login</a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="#">Join for free<span class="sr-only">(current)</span></a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="#">Login</a>
             </div>
           </div>
       </section>
@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto topnav">
           <li class="nav-item chefCorner-nav-item">
-              <a class="nav-link chefCorner-nav-atag" href="/assets/#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+              <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
           </li> 
         </ul>
       </div>
@@ -56,7 +56,7 @@
       <div class="container mt-3">
           <div class="row">
               <div class="col-md-5 modal-img">
-                <img src="/assets/images/thekids.jpg" class="rounded-0"/>
+                <img src="images/thekids.jpg" class="rounded-0"/>
               </div>
               <div class="col-md-7">          
                    <h2 class="modal-item-h2 mb-0">Orders by <span>Shola</span></h2>
@@ -77,7 +77,7 @@
                       </p>
                    </div>     
 
-                   <a class="btn custom-btn buy-btn modal-item-btn" href="/assets/">Print receipt</a>        
+                   <a class="btn custom-btn buy-btn modal-item-btn" href="">Print receipt</a>        
                               
               </div>
           </div>
@@ -91,10 +91,10 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/my_js/index.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="my_js/index.js"></script>
   </body>
 </html>
