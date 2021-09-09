@@ -42,10 +42,10 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="chef-menu.html">Menu</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-menu">Menu</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="chef-order.html">Orders</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-order">Orders</a>
                 </li>
                 <li class="nav-item chefco-tab">
                   <a class="nav-link" href="">Recicipes</a>

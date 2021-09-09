@@ -30,8 +30,8 @@
               <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
             </div>
             <div class="sidedraw-tabs">
-                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="chef-signup.html">Join for free<span class="sr-only">(current)</span></a>
-                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="sigin-in.html">Login</a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="<?php echo base_url(); ?>/user/sign-up">Join for free<span class="sr-only">(current)</span></a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="<?php echo base_url(); ?>/user/login">Login</a>
             </div>
           </div>
       </section>
@@ -43,7 +43,7 @@
           <ul class="navbar-nav ml-auto topnav">
             
                <li class="nav-item chefCorner-nav-item ">
-                  <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+                  <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
               </li>
            
           </ul>
@@ -59,13 +59,13 @@
                 <div class="row flex-nowrap">
                    <ul class="nav nav-pills mb-3 -container" >
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="customer-dashboard.html">Menu</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/customer-dashboard">Menu</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="customer-cart.html">Cart</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/customer-cart">Cart</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="order-records.html">Order record</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/order-records">Order record</a>
                     </li>
                   </ul>
                   

@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto topnav">
           <li class="nav-item chefCorner-nav-item">
-              <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+              <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
           </li> 
         </ul>
       </div>

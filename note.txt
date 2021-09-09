@@ -1,0 +1,32 @@
+set baseURL in app/Config/App.php
+
+copy env to .env and change CI_ENVIRONMENT to development
+
+create a db, set up the app/Config/Database.php to your DB credentials
+
+run migration command - php spark migrate:refresh
+
+php spark make:scaffold chef --restful
+
+
+/*
+
+authentication
+
+customers -> orders -> meals, address
+
+        orders -> id, user_id, 
+
+        meals -> quantity
+Festus 
+
+chef -> orders, menus, meals
+
+orders ->
+Ebube
+
+meals ->
+
+menus ->
+Fafo
+*/

@@ -20,7 +20,7 @@
         <!-- NAV SECTION -->
         <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
             <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-                <a class="navbar-brand logo" href="index.html">ChefCorner</a>
+                <a class="navbar-brand logo" href="<?php echo base_url(); ?>/index">ChefCorner</a>
                 
                 <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
                     <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto topnav">
                         <li class="nav-item chefCorner-nav-item ">
-                            <a class="nav-link chefCorner-nav-atag" href="#">Username<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+                            <a class="nav-link chefCorner-nav-atag" href="#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
                         </li>
                     </ul>
                 </div>
@@ -63,7 +63,7 @@
                             <div class="row flex-nowrap">
                                 <ul class="nav nav-pills mb-3 -container">
                                     <li class="nav-item chefco-tab">
-                                        <a class="nav-link" href="chef-menu.html">Menu</a>
+                                        <a class="nav-link" href="<?php echo base_url(); ?>/chef-menu">Menu</a>
                                     </li>
                                     <li class="nav-item chefco-tab">
                                         <a class="nav-link" href="">Orders</a>
@@ -126,7 +126,7 @@
 												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">          
-												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="order-details.html">Orders by <span>Shola</span></a>
+												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="<?php echo base_url(); ?>/order-details">Orders by <span>Shola</span></a>
 										
 												<div class="d-flex">
 													<span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
@@ -155,7 +155,7 @@
 												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">  
-												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="order-details.html">Orders by <span>Lara</span></a>        
+												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="<?php echo base_url(); ?>/order-details">Orders by <span>Lara</span></a>        
 												<div class="d-flex">
 													<span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
 													<p class="p-1 m-0">20 mins</p>
