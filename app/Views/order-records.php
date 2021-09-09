@@ -10,8 +10,8 @@
 		<!-- Bootstrap -->
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 		
-		<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="my_css/style.css">
+		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -20,7 +20,7 @@
         <!-- NAV SECTION -->
         <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
             <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-                <a class="navbar-brand logo" href="index.html">ChefCorner</a>
+                <a class="navbar-brand logo" href="<?php echo base_url(); ?>/p">ChefCorner</a>
                 
                 <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
                     <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto topnav">
                         <li class="nav-item chefCorner-nav-item ">
-                            <a class="nav-link chefCorner-nav-atag" href="#">Username<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+                            <a class="nav-link chefCorner-nav-atag" href="#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
                         </li>
                     </ul>
                 </div>
@@ -92,7 +92,7 @@
 									<div class="container mt-3">
 										<div class="row mb-5">
 											<div class="col-md-5 modal-img">
-												<img src="images/thekids.jpg" class="rounded-0"/>
+												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">          
 										
@@ -113,7 +113,7 @@
 										<!-- SECOND QUANTITY IN THE CART -->
 										<div class="row mt-5">
 											<div class="col-md-5 modal-img">
-												<img src="images/thekids.jpg" class="rounded-0"/>
+												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">          
 												

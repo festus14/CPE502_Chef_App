@@ -11,8 +11,8 @@
     <!-- Bootstrap -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="my_css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
     <title>ChefCorner</title>
     
   </head>
@@ -42,10 +42,10 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="chef-menu.html">Menu</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-menu">Menu</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="chef-order.html">Orders</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-order">Orders</a>
                 </li>
                 <li class="nav-item chefco-tab">
                   <a class="nav-link" href="">Recicipes</a>
@@ -129,7 +129,7 @@
     <div class="row m-5 px-5">
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
         
         <div class="d-block m-2">
@@ -149,7 +149,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -169,7 +169,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">

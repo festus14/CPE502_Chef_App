@@ -26,7 +26,7 @@
             <div>
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="login.php">Sign In</a>
+                        <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/user/login">Sign In</a>
                     </li>
                 </ul>
             </div>

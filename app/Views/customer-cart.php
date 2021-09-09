@@ -10,8 +10,8 @@
 		<!-- Bootstrap -->
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-		<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="my_css/style.css">
+		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -20,7 +20,7 @@
 		<!-- NAV SECTION -->
 		<nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
 			<div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-				<a class="navbar-brand logo" href="index.html">ChefCorner</a>
+				<a class="navbar-brand logo" href="<?php echo base_url(); ?>/">ChefCorner</a>
 				
 				<section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
 					<div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
@@ -42,7 +42,7 @@
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto topnav">
 						<li class="nav-item chefCorner-nav-item ">
-							<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+							<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
 						</li>
 					</ul>
 				</div>
@@ -118,7 +118,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="/assets/images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -147,7 +147,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
+												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
 												<span class="cart-row"style="width:70px;">$1000</span>
 											</li>
 										</ul>
@@ -160,7 +160,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="/assets/images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -189,7 +189,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
+												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
 												<span class="cart-row"style="width:70px;">$1000</span> 
 											</li>                    
 										</ul>

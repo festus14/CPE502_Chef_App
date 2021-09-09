@@ -10,8 +10,8 @@
     <!-- Bootstrap -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="my_css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
     <title>ChefCorner</title>
     
   </head>
@@ -42,7 +42,7 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto topnav">
           <li class="nav-item chefCorner-nav-item">
-              <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+              <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
           </li> 
         </ul>
       </div>
@@ -56,7 +56,7 @@
       <div class="container mt-3">
           <div class="row">
               <div class="col-md-5 modal-img">
-                <img src="images/thekids.jpg" class="rounded-0"/>
+                <img src="/assets/images/thekids.jpg" class="rounded-0"/>
               </div>
               <div class="col-md-7">          
                    <h2 class="modal-item-h2 mb-0">Orders by <span>Shola</span></h2>

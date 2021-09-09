@@ -10,8 +10,8 @@
     <!-- Bootstrap -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="my_css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
     <title>ChefCorner</title>
     
   </head>
@@ -30,8 +30,8 @@
               <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
             </div>
             <div class="sidedraw-tabs">
-                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="chef-signup.html">Join for free<span class="sr-only">(current)</span></a>
-                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="sigin-in.html">Login</a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="<?php echo base_url(); ?>/user/sign-up">Join for free<span class="sr-only">(current)</span></a>
+                <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="<?php echo base_url(); ?>/user/login">Login</a>
             </div>
           </div>
       </section>
@@ -43,7 +43,7 @@
           <ul class="navbar-nav ml-auto topnav">
             
                <li class="nav-item chefCorner-nav-item ">
-                  <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+                  <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
               </li>
            
           </ul>
@@ -59,13 +59,13 @@
                 <div class="row flex-nowrap">
                    <ul class="nav nav-pills mb-3 -container" >
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="customer-dashboard.html">Menu</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/customer-dashboard">Menu</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="customer-cart.html">Cart</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/customer-cart">Cart</a>
                     </li>
                     <li class="nav-item chefco-tab">
-                      <a class="nav-link" href="order-records.html">Order record</a>
+                      <a class="nav-link" href="<?php echo base_url(); ?>/order-records">Order record</a>
                     </li>
                   </ul>
                   
@@ -123,7 +123,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <div class="chef-product">                       
-                        <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                        <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -148,7 +148,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                       <div class="col-md-5 modal-img">
-                                        <img src="images/fufu.jpg" class="rounded-0"/>
+                                        <img src="/assets/images/fufu.jpg" class="rounded-0"/>
                                       </div>
                                       <div class="col-md-7">          
                                            <h2 class="modal-item-h2">Art of war</h2>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">                      
-                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
                          <h6>Order by <span>Shola</span></h6>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o p-1"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -211,7 +211,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>

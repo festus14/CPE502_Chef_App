@@ -8,8 +8,8 @@
 <!--  -->
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="my_css/style.css">
+<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 <title>ChefCorner</title>
 
 </head>
@@ -27,7 +27,7 @@
             <div>
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="chef-signup.html">Sign Up</a>
+                        <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/user/sign-up">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -62,17 +62,17 @@
         <div class="d-flex float-right flex-nowrap">
             <div class="ChefCorner-ss">
                 <a href="">
-                    <img src="images/facebook1.svg" />
+                    <img src="/assets/images/facebook1.svg" />
                 </a> 
             </div>
             <div class="ChefCorner-ss">
                 <a href="">
-                    <img src="images/twitter.svg" />
+                    <img src="/assets/images/twitter.svg" />
                 </a>
             </div>
             <div class="ChefCorner-ss">
                 <a href="">
-                    <img src="images/instagram.svg" />
+                    <img src="/assets/images/instagram.svg" />
                 </a>
             </div>
         </div>

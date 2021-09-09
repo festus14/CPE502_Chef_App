@@ -10,8 +10,8 @@
 		<!-- Bootstrap -->
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-		<link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="my_css/style.css">
+		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -41,7 +41,7 @@
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto topnav">
 						<li class="nav-item chefCorner-nav-item ">
-							<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
+							<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
 						</li>
 					</ul>
 				</div>
@@ -59,7 +59,7 @@
 							<div class="col-md-12 d-flex justify-content-center">
 								<div class="basic-details " style="width:100%; max-width: 794px;box-shadow: 0 0 12px 0px #6c757d;">
 									<div class="row" style="width: 100%;margin:0px;">
-										<div class="col-md-4 d-flex justify-content-center align-items-center" style="padding:15px 0px;"><img src="images/user.svg" style="width:197px;height: 170px;"></div>
+										<div class="col-md-4 d-flex justify-content-center align-items-center" style="padding:15px 0px;"><img src="/assets/images/user.svg" style="width:197px;height: 170px;"></div>
 										<div class="col-md-8 d-flex align-items-center"> 
 											<div class="form-group" style="width: 100%;">
 												<input type="text" class="form-control shadow-none my-3" placeholder="Username">
@@ -72,7 +72,7 @@
 											<div class="form-group" style="margin:0px;">
 												<ul style="text-decoration:none;margin: 0px;padding-left:70px;">
 													<li style="display:inline-block;">
-														<img src="images/arroba.svg" style="width:32px;height:32px;display:inline-block;"/>
+														<img src="/assets/images/arroba.svg" style="width:32px;height:32px;display:inline-block;"/>
 													</li>
 													<li style="display:inline-block;width:70%">
 														<input type="text" style="display:inline-block;" class="form-control form-control-sm  shadow-none my-3" placeholder="Email" />
