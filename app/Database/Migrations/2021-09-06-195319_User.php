@@ -42,7 +42,7 @@ class User extends Migration
 				'type' => 'ENUM',
 				'constraint' => ['active', 'inactive'],
 				'null' => true,
-				'default' => 'active',
+				'default' => 'inactive',
 			],
 			'role' => [
 				'type' => 'ENUM',

@@ -24,7 +24,7 @@ class Chef extends ResourceController
 	 */
 	public function show($id = null)
 	{
-		//
+		return view('/chef-dashboard');
 	}
 
 	/**
@@ -54,7 +54,8 @@ class Chef extends ResourceController
 	 */
 	public function edit($id = null)
 	{
-		//
+		
+		return view('/chef-profile');
 	}
 
 	/**

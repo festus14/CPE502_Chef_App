@@ -24,7 +24,7 @@ class Customer extends ResourceController
 	 */
 	public function show($id = null)
 	{
-		//
+		return view('/customer-dashboard');
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Customer extends ResourceController
 	 */
 	public function edit($id = null)
 	{
-		//
+		return view('/customer-profile');
 	}
 
 	/**

@@ -24,6 +24,7 @@ class User extends Model
 		'email',
 		'created_at',
 		'updated_at',
+		'deleted_at'
 	];
 
 	// Dates

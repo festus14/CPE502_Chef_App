@@ -14,7 +14,12 @@ class Chef extends Model
 	protected $returnType           = 'array';
 	protected $useSoftDeletes       = false;
 	protected $protectFields        = true;
-	protected $allowedFields        = [];
+	protected $allowedFields        = [
+		'user_id',
+		'created_at',
+		'updated_at',
+		'deleted_at'
+	];
 
 	// Dates
 	protected $useTimestamps        = false;
