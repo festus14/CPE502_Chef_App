@@ -59,7 +59,7 @@
                         <div class="row flex-nowrap">
                             <ul class="nav nav-pills mb-3 -container">
                                 <li class="nav-item chefco-tab">
-                                    <a class="nav-link" href="<?php echo base_url(); ?>/menu">Menu</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>/meal">Meal</a>
                                 </li>
                                 <li class="nav-item chefco-tab">
                                     <a class="nav-link" href="<?php echo base_url(); ?>/order">Orders</a>
@@ -84,7 +84,7 @@
                     </div>
                 <?php endif; ?>
                 <div class="col-md-12 m-auto py-3">
-                    <form action="<?php echo base_url(); ?>/menu/create" method="post">
+                    <form action="<?php echo base_url(); ?>/meal/create" method="post">
                         <?= csrf_field() ?>    
                         <div class="form-group mb-4">
                             <label for="name">Name :</label>

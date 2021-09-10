@@ -3,10 +3,10 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\Menu as MenuModel;
+use App\Models\Meal as MealModel;
 
 
-class Menu extends ResourceController
+class Meal extends ResourceController
 {
     /**
      * Return an array of resource objects, themselves in array format
@@ -15,7 +15,7 @@ class Menu extends ResourceController
      */
     public function index()
     {
-        return view('create-menu');
+        return view('create-meal');
     }
 
     /**
@@ -60,7 +60,7 @@ class Menu extends ResourceController
         ];
 
         if($this->validate($rules)){
-            $meal = new MenuModel();
+            $meal = new MealModel();
 
             $data = [
 				'name' => $this->request->getVar('name'),
@@ -90,7 +90,7 @@ class Menu extends ResourceController
      */
     public function edit($id = null)
     {
-        $meal = new MenuModel();
+        $meal = new MealModel();
 		$data['meal'] = $meal->find($id);
 		return view('', $data);
     }
@@ -112,7 +112,7 @@ class Menu extends ResourceController
      */
     public function delete($id = null)
     {
-        $meal = new MenuModel();
+        $meal = new MealModel();
 		$meal->delete($id);
 		return redirect()->to(base_url())->with('status','Meal Deleted Succesfully');
     }

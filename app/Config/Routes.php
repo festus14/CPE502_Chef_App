@@ -48,8 +48,8 @@ $routes->get('/customer/edit/(:id)', 'Customer::edit/$1', ['filter' => 'authGuar
 // Chef Routes
 $routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
 //menu
-$routes->get('/menu', 'Menu::index');
-$routes->post('/menu/create', 'Menu::create');
+$routes->get('/meal', 'Meal::index');
+$routes->post('/meal/create', 'Meal::create');
 
 $routes->get('/recipe', 'Recipe::index');
 $routes->get('/order', 'Order::index');
