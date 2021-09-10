@@ -56,7 +56,7 @@
       <div class="container mt-3">
           <div class="row">
               <div class="col-md-5 modal-img">
-                <img src="/assets/images/thekids.jpg" class="rounded-0"/>
+                <img src="images/thekids.jpg" class="rounded-0"/>
               </div>
               <div class="col-md-7">          
                    <h2 class="modal-item-h2 mb-0">Orders by <span>Shola</span></h2>

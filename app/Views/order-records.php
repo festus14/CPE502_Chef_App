@@ -11,7 +11,7 @@
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 		
 		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+	    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -92,7 +92,7 @@
 									<div class="container mt-3">
 										<div class="row mb-5">
 											<div class="col-md-5 modal-img">
-												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
+												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">          
 										
@@ -113,7 +113,7 @@
 										<!-- SECOND QUANTITY IN THE CART -->
 										<div class="row mt-5">
 											<div class="col-md-5 modal-img">
-												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
+												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-7">          
 												
