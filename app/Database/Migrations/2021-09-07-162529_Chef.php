@@ -27,9 +27,24 @@ class Chef extends Migration
 				'constraint' => '150',
 				'null' => true,
 			],
+			'restaurant_name' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+				'null' => true,
+			],
 			'address' => [
 				'type' => 'VARCHAR',
 				'constraint' => '150',
+				'null' => true,
+			],
+			'website_url' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+				'null' => true,
+			],
+			'bio' => [
+				'type' => 'VARCHAR',
+				'constraint' => '250',
 				'null' => true,
 			],
 			'status' => [

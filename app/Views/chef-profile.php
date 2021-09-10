@@ -53,7 +53,7 @@
 
 	<!-- MAIN SECTION -->
 	<div class="container-fluid chefCo-container">
-		<form action="<?php echo base_url() ?>/customer/update/<?php $id ?>" method="post">
+		<form action="<?php echo base_url() ?>/chef/update/<?php $id ?>" method="post">
 			<?= csrf_field() ?>
 			<div class="row profile-detail">
 				<div class="container">
@@ -96,7 +96,7 @@
 								<div class="theform" style="padding-bottom: 20px;">
 									<div class="form-group">
 										<label for="Username">Restaurant Name</label>
-										<input type="text" class="form-control shadow-none" placeholder="Restaurant Name">
+										<input type="text" class="form-control shadow-none" placeholder="Restaurant Name" name="restaurant_name" value="<?php echo $restaurant_name ?>">
 									</div>
 									<div class="form-group">
 										<label for="Username">Address</label>
@@ -104,11 +104,11 @@
 									</div>
 									<div class="form-group">
 										<label for="bio">Bio</label>
-										<textarea class="form-control shadow-none" rows="5"></textarea>
+										<textarea class="form-control shadow-none" rows="5" name="bio" value="<?php echo $bio ?>"></textarea>
 									</div>
 									<div class="form-group">
 										<label for="Website">Website</label>
-										<input type="text" class="form-control shadow-none" placeholder="Your website">
+										<input type="text" class="form-control shadow-none" placeholder="Your website" name="website_url" value="<?php echo $website_url ?>">
 									</div>
 									<!-- <div class="form-group">
 										<label for="Country">Country</label>
