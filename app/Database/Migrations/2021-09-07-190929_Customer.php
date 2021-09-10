@@ -6,7 +6,7 @@ use CodeIgniter\Database\Migration;
 
 class Customer extends Migration
 {
-	public function up()
+    public function up()
     {
         $this->db->disableForeignKeyChecks();
         $this->forge->addField([
@@ -22,12 +22,19 @@ class Customer extends Migration
                 'constraint' => 5,
                 'null' => true,
             ],
+			'user_name' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+			],
+			'address' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+			],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('customers');
         $this->db->enableForeignKeyChecks();
-
     }
 
     public function down()

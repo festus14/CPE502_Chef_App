@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Chef;
+use App\Models\Customer;
 use App\Models\User as ModelsUser;
 use CodeIgniter\RESTful\ResourceController;
 
@@ -63,14 +65,23 @@ class User extends ResourceController
 				'first_name' => $this->request->getVar('first_name'),
 				'other_names' => $this->request->getVar('other_names'),
 				'phone_number' => $this->request->getVar('phone_number'),
-				'status' => $this->request->getVar('status'),
 				'role' => $this->request->getVar('role'),
 				'email' => $this->request->getVar('email'),
-				'status' => empty($this->request->getVar('status')) ? 'active' : $this->request->getVar('status'),
+				'status' => 'inactive',
 				'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
 			];
 
 			$userModel->save($data);
+
+			$user = $userModel->asArray()->where('email', $this->request->getVar('email'))->first();
+
+			if ($this->request->getVar('role') == 'chef') {
+				$chefModel = new Chef();
+				$chefModel->save(['user_id' => $user['id']]);
+			} else {
+				$customerModel = new Customer();
+				$customerModel->save(['user_id' => $user['id']]);
+			}
 
 			return redirect()->to('/user/login/');
 		} else {
@@ -102,16 +113,19 @@ class User extends ResourceController
 					'id' => $data['id'],
 					'first_name' => $data['first_name'],
 					'other_names' => $data['other_names'],
+					'phone_number' => $data['phone_number'],
 					'role' => $data['role'],
 					'email' => $data['email'],
 					'isLoggedIn' => true,
 				];
 
 				$session->set($ses_data);
-				if ($userModel->role == 'chef') {
-					return redirect()->to('/chef');
+				if ($data['role'] == 'chef') {
+					if ($data['status'] == 'inactive') return redirect()->to('/chef/edit/' . $data['id']);
+					return redirect()->to('/chef/show/' . $data['id']);
 				} else {
-					return redirect()->to('/customer');
+					if ($data['status'] == 'inactive') return redirect()->to('/customer/edit/' . $data['id']);
+					return redirect()->to('/customer/show/' . $data['id']);
 				}
 			} else {
 				$session->setFlashdata('msg', 'Password is incorrect.');

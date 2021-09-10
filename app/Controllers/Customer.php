@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Customer as ModelsCustomer;
 use CodeIgniter\RESTful\ResourceController;
 
 class Customer extends ResourceController
@@ -24,7 +25,7 @@ class Customer extends ResourceController
 	 */
 	public function show($id = null)
 	{
-		//
+		return view('/customer-dashboard');
 	}
 
 	/**
@@ -54,7 +55,9 @@ class Customer extends ResourceController
 	 */
 	public function edit($id = null)
 	{
-		//
+		$customerModel = new ModelsCustomer();
+		$customer = $customerModel->find($id);
+		return view('/customer-profile', $customer);
 	}
 
 	/**
