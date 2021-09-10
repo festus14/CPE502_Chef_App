@@ -38,12 +38,6 @@ class User extends Migration
 				'type' => 'VARCHAR',
 				'constraint' => '150',
 			],
-			'status' => [
-				'type' => 'ENUM',
-				'constraint' => ['active', 'inactive'],
-				'null' => true,
-				'default' => 'inactive',
-			],
 			'role' => [
 				'type' => 'ENUM',
 				'constraint' => ['customer', 'chef'],

@@ -67,7 +67,25 @@ class Chef extends ResourceController
 	 */
 	public function update($id = null)
 	{
-		//
+		$chefModel = new ModelsChef();
+
+		$rules = [
+			'user_name' => 'required|min_length[2]|max_length[50]',
+			'address' => 'required|min_length[2]|max_length[50]',
+		];
+
+		if ($this->validate($rules)) {
+			$data = [
+				'address' => $this->request->getVar('address'),
+				'user_name' => $this->request->getVar('user_name')
+			];
+
+			$chefModel->update($id, $data);
+			return redirect()->to('/customer/show/'. $id);
+		} else {
+			$data['validation'] = $this->validator;
+			return redirect()->back()->with('data', $data);
+		}
 	}
 
 	/**

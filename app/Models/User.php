@@ -19,7 +19,6 @@ class User extends Model
 		'other_names',
 		'phone_number',
 		'password',
-		'status',
 		'role',
 		'email',
 		'created_at',

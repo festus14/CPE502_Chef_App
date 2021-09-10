@@ -42,7 +42,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto topnav">
 					<li class="nav-item chefCorner-nav-item ">
-						<a class="nav-link chefCorner-nav-atag" href="#">Username<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
+						<a class="nav-link chefCorner-nav-atag" href="<?php echo base_url() ?>/customer/edit/<?php echo $id ?>"><?php echo ($user_name ?? 'username') ?> <img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
 					</li>
 				</ul>
 			</div>
@@ -53,7 +53,7 @@
 
 	<!-- MAIN SECTION -->
 	<div class="container-fluid chefCo-container">
-		<form action="<?php echo base_url(); ?>/customer/update" method="post">
+		<form action="<?php echo base_url() ?>/customer/update/<?php $id ?>" method="post">
 			<?= csrf_field() ?>
 			<div class="row profile-detail">
 				<div class="container">
@@ -64,7 +64,7 @@
 									<div class="col-md-4 d-flex justify-content-center align-items-center" style="padding:15px 0px;"><img src="/assets/images/user.svg" style="width:197px;height: 170px;"></div>
 									<div class="col-md-8 d-flex align-items-center">
 										<div class="form-group" style="width: 100%;">
-											<input type="text" class="form-control shadow-none my-3" placeholder="Username" name="user_name" value="<?php $user_name ?>">
+											<input type="text" class="form-control shadow-none my-3" placeholder="Username" name="user_name" value="<?php echo $user_name ?>">
 											<input type="text" class="form-control shadow-none" placeholder="Mobile number" readonly value="<?php echo session()->get('phone_number') ?>">
 										</div>
 									</div>
@@ -100,7 +100,7 @@
 									</div>
 									<div class="form-group">
 										<label for="Username">Address</label>
-										<input type="text" class="form-control shadow-none" placeholder="Address" name="address" value="<?php $user_name ?>">
+										<input type="text" class="form-control shadow-none" placeholder="Address" name="address" value="<?php echo $address ?>">
 									</div>
 									<div class="form-group">
 										<label for="bio">Bio</label>
