@@ -67,15 +67,14 @@ class User extends ResourceController
 				'phone_number' => $this->request->getVar('phone_number'),
 				'role' => $this->request->getVar('role'),
 				'email' => $this->request->getVar('email'),
-				'status' => 'inactive',
 				'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
 			];
 
 			$userModel->save($data);
 
-			$user = $userModel->asArray()->where('email', $this->request->getVar('email'))->first();
+			$user = $userModel->asArray()->where('email', $data['email'])->first();
 
-			if ($this->request->getVar('role') == 'chef') {
+			if ($user['role'] == 'chef') {
 				$chefModel = new Chef();
 				$chefModel->save(['user_id' => $user['id']]);
 			} else {
@@ -92,7 +91,7 @@ class User extends ResourceController
 
 	public function login()
 	{
-		echo view('sign-in');
+		echo view('login');
 	}
 
 	public function loginAuth()
@@ -121,11 +120,15 @@ class User extends ResourceController
 
 				$session->set($ses_data);
 				if ($data['role'] == 'chef') {
-					if ($data['status'] == 'inactive') return redirect()->to('/chef/edit/' . $data['id']);
-					return redirect()->to('/chef/show/' . $data['id']);
+					$chefModel = new Chef();
+					$chef = $chefModel->where('user_id', $data['id'])->first();
+					if ($chef['status'] == 'inactive') return redirect()->to('/chef/edit/' . $chef['id']);
+					return redirect()->to('/chef/show/' . $chef['id']);
 				} else {
-					if ($data['status'] == 'inactive') return redirect()->to('/customer/edit/' . $data['id']);
-					return redirect()->to('/customer/show/' . $data['id']);
+					$customerModel = new Customer();
+					$customer = $customerModel->where('user_id', $data['id'])->first();
+					if ($customer['status'] == 'inactive') return redirect()->to('/customer/edit/' . $customer['id']);
+					return redirect()->to('/customer/show/' . $customer['id']);
 				}
 			} else {
 				$session->setFlashdata('msg', 'Password is incorrect.');

@@ -77,47 +77,56 @@
                     </div>
                 </div>
 			</div>
-			<!-- END OF PAGINATION SECTION -->
-			
-				<!-- VIEW ORDER SECTION -->
-				<div class="row" style="margin-top: 60px; margin-bottom: 100px;">
-					<div class="container">
-						<div class="col-md-9"><h1 style="padding: 0px; margin: 0px;">Orders</h1></div>
-						<div class="row">
-							<div class="col-md-9">
-								<div class="container-fluid">
-									<div class="row headings x-headings">
-										<div class="col-lg-4">
-											<ul class="nav">
-												<li class="nav-item">
-													<span class="cart-row">Items</span>
-												</li>
-											</ul>
-										</div>
-										<div class="col-lg-3">
-											<ul class="nav">
-												<li class="nav-item">
-													<span class="cart-row">Description</span>
-												</li>
-											</ul>
-										</div>
-										<div class="col-lg-4 nav">
-											<form style="flex-wrap: nowrap;display: flex;">
-												<div class="form-check nav-item pr-3">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-													<label class="form-check-label cart-row" for="flexCheckDefault">Pending</label>
-												</div>
-												<div class="form-check neav-item pr-3">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-													<label class="form-check-label cart-row" for="flexCheckChecked">Processed</label>
-												</div>
-												<div class="form-check nav-item pr-3">
-													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-													<label class="form-check-label cart-row" for="flexCheckDefault">Rejected</label>
-												</div>
-											</form>
+		</div>
+		<!-- END OF PAGINATION SECTION -->
 
+		<!-- VIEW ORDER SECTION -->
+		<div class="row" style="margin-top: 60px; margin-bottom: 100px;">
+			<div class="container">
+				<div class="col-md-9">
+					<h1 style="padding: 0px; margin: 0px;">Orders</h1>
+				</div>
+				<div class="row">
+					<div class="col-md-9">
+						<div class="container-fluid">
+							<div class="row headings x-headings">
+								<div class="col-lg-4">
+									<ul class="nav">
+										<li class="nav-item">
+											<span class="cart-row">Items</span>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-3">
+									<ul class="nav">
+										<li class="nav-item">
+											<span class="cart-row">Description</span>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4 nav">
+									<form style="flex-wrap: nowrap;display: flex;">
+										<div class="form-check nav-item pr-3">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+											<label class="form-check-label cart-row" for="flexCheckDefault">Pending</label>
 										</div>
+										<div class="form-check neav-item pr-3">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label cart-row" for="flexCheckChecked">Processed</label>
+										</div>
+										<div class="form-check nav-item pr-3">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+											<label class="form-check-label cart-row" for="flexCheckDefault">Rejected</label>
+										</div>
+									</form>
+
+								</div>
+							</div>
+							<!-- FIRST QUANTITY IN THE CART -->
+							<div class="container mt-3">
+								<div class="row mb-5">
+									<div class="col-md-5 modal-img">
+										<img src="/assets/images/thekids.jpg" class="rounded-0" />
 									</div>
 									<!-- FIRST QUANTITY IN THE CART -->
 									<div class="container mt-3">
@@ -125,27 +134,8 @@
 											<div class="col-md-5 modal-img">
 												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
-											<div class="col-md-7">          
-												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="<?php echo base_url(); ?>/order-details">Orders by <span>Shola</span></a>
-										
-												<div class="d-flex">
-													<span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-													<p class="p-1 m-0">10 mins</p>
-												</div>
-												<div class="descriptions">
-													<p>
-														1 cake, 5 drink, 50 bread, 6 chicken. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et magna ac erat malesuada pellentesque et vitae dui. Aenean vitae eros gravida, dignissim enim vitae, ultricies orci.
-													</p>
-												</div> 
-												<h2 class="modal-item-total"><span class="Total-price">$40</span></h2>
-												<div class="row">
-													<div class="col-md-3 m-1">
-														<button class="btn custom-btn buy-btn btn-block">Accept</button>
-													</div>
-													<div class="col-md-3 m-1">
-														<button class="btn btn-danger btn-block">Reject</button>
-													</div>
-												</div>
+											<div class="col-md-3 m-1">
+												<button class="btn btn-danger btn-block">Reject</button>
 											</div>
 										</div>
 										<!-- END OF FIRST QUANTITY IN THE CART -->
@@ -154,72 +144,57 @@
 											<div class="col-md-5 modal-img">
 												<img src="images/thekids.jpg" class="rounded-0"/>
 											</div>
-											<div class="col-md-7">  
-												<a class="modal-item-h2 mb-0" style="color:#022b69;" href="<?php echo base_url(); ?>/order-details">Orders by <span>Lara</span></a>        
-												<div class="d-flex">
-													<span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-													<p class="p-1 m-0">20 mins</p>
-												</div>
-												<div class="descriptions">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et magna ac erat malesuada pellentesque et vitae dui. Aenean vitae eros gravida, dignissim enim vitae, ultricies orci.
-													</p>
-												</div> 
-												<h2 class="modal-item-total"><span class="Total-price">$29</span></h2>
-												<div class="row">
-													<div class="col-md-3 m-1">
-														<button class="btn custom-btn buy-btn btn-block">Accept</button>
-													</div>
-													<div class="col-md-3 m-1">
-														<button class="btn btn-danger btn-block">Reject</button>
-													</div>
-												</div>
+											<div class="col-md-3 m-1">
+												<button class="btn btn-danger btn-block">Reject</button>
 											</div>
 										</div>
-										<!-- END OF SECOND QUANTITY IN THE CART -->
 									</div>
 								</div>
+								<!-- END OF SECOND QUANTITY IN THE CART -->
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- END OF VIEW ORDER SECTION -->
-
-
-
-				<!-- FOOTER SECTION -->
-				<div class="row footer-row">
-					<div class="container">
-						<div class="row footer">
-							<div class="col-md-2 ft footer-logo">
-								<a href="">ChefCorner</a>
-							</div>
-							<div class="col-md-5 ft m-auto">
-								<ul class="footer-tab">
-									<li><a href="">Help</a> </li>
-									<li><a href="">About</a></li>
-									<li><a href="">Price</a></li>
-									<li><a href="">Blog</a></li>
-								</ul>
-							</div>
-							<div class="col-md-5 ft m-auto">
-								<p class="m-0 p-0">&copy; 2021 All rights reserved.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END OF FOOTER SECTION -->
-
 			</div>
-			<!-- END OF MAIN SECTION -->
 		</div>
+		<!-- END OF VIEW ORDER SECTION -->
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="my_js/jquery-3.4.1.slim.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-		<script src="my_js/index.js"></script>
-	
-	</body>
+
+
+		<!-- FOOTER SECTION -->
+		<div class="row footer-row">
+			<div class="container">
+				<div class="row footer">
+					<div class="col-md-2 ft footer-logo">
+						<a href="">ChefCorner</a>
+					</div>
+					<div class="col-md-5 ft m-auto">
+						<ul class="footer-tab">
+							<li><a href="">Help</a> </li>
+							<li><a href="">About</a></li>
+							<li><a href="">Price</a></li>
+							<li><a href="">Blog</a></li>
+						</ul>
+					</div>
+					<div class="col-md-5 ft m-auto">
+						<p class="m-0 p-0">&copy; 2021 All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END OF FOOTER SECTION -->
+
+	</div>
+	<!-- END OF MAIN SECTION -->
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="my_js/jquery-3.4.1.slim.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="my_js/index.js"></script>
+
+</body>
+
 </html>

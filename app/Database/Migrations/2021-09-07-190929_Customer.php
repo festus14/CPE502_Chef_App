@@ -22,14 +22,22 @@ class Customer extends Migration
                 'constraint' => 5,
                 'null' => true,
             ],
-			'user_name' => [
-				'type' => 'VARCHAR',
-				'constraint' => '150',
-			],
-			'address' => [
-				'type' => 'VARCHAR',
-				'constraint' => '150',
-			],
+            'user_name' => [
+                'type' => 'VARCHAR',
+                'constraint' => '150',
+                'null' => true,
+            ],
+            'address' => [
+                'type' => 'VARCHAR',
+                'constraint' => '150',
+                'null' => true,
+            ],
+            'status' => [
+                'type' => 'ENUM',
+                'constraint' => ['active', 'inactive'],
+                'default' => 'inactive',
+                'null' => true,
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
