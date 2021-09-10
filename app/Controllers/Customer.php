@@ -79,7 +79,8 @@ class Customer extends ResourceController
 		if ($this->validate($rules)) {
 			$data = [
 				'address' => $this->request->getVar('address'),
-				'user_name' => $this->request->getVar('user_name')
+				'user_name' => $this->request->getVar('user_name'),
+				'status' => 'active',
 			];
 
 			$customerModel->update($id, $data);

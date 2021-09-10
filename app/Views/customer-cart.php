@@ -118,7 +118,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="/assets/images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -147,7 +147,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
+												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
 												<span class="cart-row"style="width:70px;">$1000</span>
 											</li>
 										</ul>
@@ -160,7 +160,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="/assets/images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -189,7 +189,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
+												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
 												<span class="cart-row"style="width:70px;">$1000</span> 
 											</li>                    
 										</ul>
@@ -268,10 +268,10 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-		<script src="my_js/jquery-3.4.1.slim.min.js"></script>
+		<script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-		<script src="my_js/index.js"></script>
+		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="/assets/my_js/index.js"></script>
 	</body>
 </html>

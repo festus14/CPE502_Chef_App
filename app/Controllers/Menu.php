@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
+use App\Models\Meal;
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\Meal as MealModel;
-use App\Models\Chef as ChefModel;
+use App\Models\Menu as MenuModel;
 
 
-class Meal extends ResourceController
+class Menu extends ResourceController
 {
     /**
      * Return an array of resource objects, themselves in array format
@@ -26,8 +26,7 @@ class Meal extends ResourceController
      */
     public function show($id = null)
     {
-        $meal = new MealModel();
-        $data['meal'] = $meal->find($id);
+        //
     }
 
     /**
@@ -37,7 +36,7 @@ class Meal extends ResourceController
      */
     public function new()
     {
-        return view('create-meal');
+        return view('create-menu');
     }
 
     /**
@@ -49,12 +48,7 @@ class Meal extends ResourceController
     {
         helper(['form']);
 
-
         $session = session();
-        $user_id = $session->get('id');
-
-        $chef = new ChefModel();
-        $chef_details = $chef->find(['user_id' => $user_id]);
 
         $rules = [
             'name' => 'required|min_length[2]|max_length[50]',
@@ -68,7 +62,7 @@ class Meal extends ResourceController
         ];
 
         if ($this->validate($rules)) {
-            $meal = new MealModel();
+            $meal = new Meal();
 
             $data = [
                 'name' => $this->request->getVar('name'),
@@ -79,7 +73,7 @@ class Meal extends ResourceController
                 'price' => $this->request->getVar('price'),
                 'is_discount' => $this->request->getVar('is_discount'),
                 'discount' => $this->request->getVar('discount'),
-                'chef_id' => $chef_details['id'],
+                'chef_id' => $session->get('id'),
             ];
 
             $meal->save($data);
@@ -98,7 +92,7 @@ class Meal extends ResourceController
      */
     public function edit($id = null)
     {
-        $meal = new MealModel();
+        $meal = new Meal();
         $data['meal'] = $meal->find($id);
         return view('', $data);
     }
@@ -120,7 +114,7 @@ class Meal extends ResourceController
      */
     public function delete($id = null)
     {
-        $meal = new MealModel();
+        $meal = new Meal();
         $meal->delete($id);
         return redirect()->to(base_url())->with('status', 'Meal Deleted Succesfully');
     }

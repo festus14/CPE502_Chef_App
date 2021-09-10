@@ -17,7 +17,10 @@ class Chef extends Model
 	protected $allowedFields        = [
 		'user_id',
 		'user_name',
+		'restaurant_name',
 		'address',
+		'website_url',
+		'bio',
 		'status',
 		'created_at',
 		'updated_at',

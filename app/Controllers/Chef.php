@@ -25,7 +25,9 @@ class Chef extends ResourceController
 	 */
 	public function show($id = null)
 	{
-		return view('/chef-dashboard');
+		$chefModel = new ModelsChef();
+		$chef = $chefModel->find($id);
+		return view('/chef-dashboard', $chef);
 	}
 
 	/**
@@ -72,16 +74,21 @@ class Chef extends ResourceController
 		$rules = [
 			'user_name' => 'required|min_length[2]|max_length[50]',
 			'address' => 'required|min_length[2]|max_length[50]',
+			'restaurant_name' => 'required|min_length[2]|max_length[100]',
 		];
 
 		if ($this->validate($rules)) {
 			$data = [
 				'address' => $this->request->getVar('address'),
-				'user_name' => $this->request->getVar('user_name')
+				'user_name' => $this->request->getVar('user_name'),
+				'restaurant_name' => $this->request->getVar('restaurant_name'),
+				'website_url' => $this->request->getVar('website_url'),
+				'bio' => $this->request->getVar('bio'),
+				'status' => 'active',
 			];
 
 			$chefModel->update($id, $data);
-			return redirect()->to('/customer/show/'. $id);
+			return redirect()->to('/chef/show/' . $id);
 		} else {
 			$data['validation'] = $this->validator;
 			return redirect()->back()->with('data', $data);

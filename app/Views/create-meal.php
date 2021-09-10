@@ -17,38 +17,38 @@
 <body>
     <!--Header 1-->
     <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
-      <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
-          <a class="navbar-brand logo" href="#">ChefCorner</a>
-           
-          <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
-              <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
-              <div class="sidedraw-wrapper">
-                <div class="sidedraw-header">
-                  <div class="sidedraw-title">
-                    ChefCorner
-                  </div>
-                  <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
-                </div>
-                <div class="sidedraw-tabs">
-                    <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="#">Join for free<span class="sr-only">(current)</span></a>
-                    <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="#">Login</a>
-                </div>
-              </div>
-          </section>
-          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-sidedraw-trigger aria-controls="sidedraw-name" aria-expanded="false">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+        <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
+            <a class="navbar-brand logo" href="#">ChefCorner</a>
 
-          <div class="collapse navbar-collapse" >
-              <ul class="navbar-nav ml-auto topnav">
-                
-                   <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;"/></a>
-                  </li>
-               
-              </ul>
-          </div>
-      </div>
+            <section class="sidedraw" id="sidedraw-name" data-sidedraw-target>
+                <div class="sidedraw-overlay" data-sidedraw-close tabindex="-1"></div>
+                <div class="sidedraw-wrapper">
+                    <div class="sidedraw-header">
+                        <div class="sidedraw-title">
+                            ChefCorner
+                        </div>
+                        <button class="sidedraw-close" data-sidedraw-close aria-label="Close sidedraw"></button>
+                    </div>
+                    <div class="sidedraw-tabs">
+                        <a class="sidedraw-nav-link chefCorner-sidedraw-join" href="#">Join for free<span class="sr-only">(current)</span></a>
+                        <a class="sidedraw-nav-link chefCorner-sidedraw-login" href="#">Login</a>
+                    </div>
+                </div>
+            </section>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-sidedraw-trigger aria-controls="sidedraw-name" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto topnav">
+
+                    <li class="nav-item chefCorner-nav-item ">
+                        <a class="nav-link chefCorner-nav-atag" href="#">User's Name<img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <div class="container-fluid chefCo-container">
@@ -65,7 +65,7 @@
                                     <a class="nav-link" href="<?php echo base_url(); ?>/order">Orders</a>
                                 </li>
                                 <li class="nav-item chefco-tab">
-                                    <a class="nav-link" href="<?php echo base_url(); ?>/recipe">Recicipes</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>/recipe">Recipes</a>
                                 </li>
                             </ul>
 
@@ -117,7 +117,7 @@
                         </div>
 
                         <div class="form-group mb-4 form-check">
-                            <input class="form-check-input" type="checkbox" value="is_discount"  name="is_discount" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="is_discount" name="is_discount" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Discount
                             </label>
@@ -163,11 +163,11 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="my_js/index.js"></script>
+    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/my_js/index.js"></script>
 </body>
 
 </html>
