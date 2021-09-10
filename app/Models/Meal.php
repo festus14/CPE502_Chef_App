@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Menu extends Model
+class Meal extends Model
 {
     protected $DBGroup              = 'default';
     protected $table                = 'menus';

@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Menu extends Migration
+class Meal extends Migration
 {
     public function up()
     {
