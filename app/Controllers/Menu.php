@@ -59,7 +59,7 @@ class Menu extends ResourceController
         ];
 
         if($this->validate($rules)){
-            $user = new MealModel();
+            $meal = new MealModel();
 
             $data = [
 				'name' => $this->request->getVar('name'),
@@ -73,9 +73,9 @@ class Menu extends ResourceController
 				'chef_id' => $session->get('id'),
             ];
 
-            $user->save($data);
+            $meal->save($data);
 
-            return redirect()->to('');
+            return redirect()->to('/chef-menu');
         }else{
             $data['validation'] = $this->validator;
 			return view('', $data);
