@@ -88,7 +88,7 @@
                         <?= csrf_field() ?>    
                         <div class="form-group mb-4">
                             <label for="name">Name :</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                         <div class="form-group mb-4">
                             <label for="desc">Description :</label>
@@ -102,8 +102,8 @@
                             </select>
                         </div>
                         <div class="form-group mb-4">
-                            <label for="uploadProduct">Cover :</label>
-                            <input class="form-control p-5" type="file" name="uploadProduct" id="uploadProduct">
+                            <label for="cover">Cover :</label>
+                            <input class="form-control p-5" type="file" name="cover" id="cover">
                         </div>
 
                         <div class="form-group mb-4">

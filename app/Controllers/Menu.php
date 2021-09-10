@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\Meal as MealModel;
+use App\Models\Menu as MenuModel;
 
 
 class Menu extends ResourceController
@@ -35,7 +35,6 @@ class Menu extends ResourceController
      */
     public function new()
     {
-        return view('create-meal');
     }
 
     /**
@@ -46,20 +45,22 @@ class Menu extends ResourceController
     public function create()
     {
 		helper(['form']);
+        
         $session = session();
+
         $rules = [
 			'name' => 'required|min_length[2]|max_length[50]',
 			'description' => 'required|min_length[2]|max_length[200]',
 			'item_category' => 'required|min_length[2]|max_length[50]',
 			'quantity' => 'required',
-			'uploadProduct' => 'required',
+			'cover' => 'required',
 			'price' => 'required',
             'is_discount' => 'required',
             'discount' => 'required',
         ];
 
         if($this->validate($rules)){
-            $meal = new MealModel();
+            $meal = new MenuModel();
 
             $data = [
 				'name' => $this->request->getVar('name'),
@@ -74,11 +75,11 @@ class Menu extends ResourceController
             ];
 
             $meal->save($data);
-
+            
             return redirect()->to('/chef-menu');
         }else{
             $data['validation'] = $this->validator;
-			return view('', $data);
+			return view('create-menu', $data);
         }
     }
 
@@ -89,7 +90,7 @@ class Menu extends ResourceController
      */
     public function edit($id = null)
     {
-        $meal = new MealModel();
+        $meal = new MenuModel();
 		$data['meal'] = $meal->find($id);
 		return view('', $data);
     }
@@ -111,7 +112,7 @@ class Menu extends ResourceController
      */
     public function delete($id = null)
     {
-        $meal = new MealModel();
+        $meal = new MenuModel();
 		$meal->delete($id);
 		return redirect()->to(base_url())->with('status','Meal Deleted Succesfully');
     }
