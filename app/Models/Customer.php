@@ -18,6 +18,7 @@ class Customer extends Model
 		'user_id',
 		'user_name',
 		'address',
+		'status',
 		'created_at',
 		'updated_at',
 		'deleted_at'

@@ -25,7 +25,9 @@ class Customer extends ResourceController
 	 */
 	public function show($id = null)
 	{
-		return view('/customer-dashboard');
+		$customerModel = new ModelsCustomer();
+		$customer = $customerModel->find($id);
+		return view('/customer-dashboard', $customer);
 	}
 
 	/**
@@ -67,7 +69,25 @@ class Customer extends ResourceController
 	 */
 	public function update($id = null)
 	{
-		//
+		$customerModel = new ModelsCustomer();
+
+		$rules = [
+			'user_name' => 'required|min_length[2]|max_length[50]',
+			'address' => 'required|min_length[2]|max_length[50]',
+		];
+
+		if ($this->validate($rules)) {
+			$data = [
+				'address' => $this->request->getVar('address'),
+				'user_name' => $this->request->getVar('user_name')
+			];
+
+			$customerModel->update($id, $data);
+			return redirect()->to('/customer/show/' . $id);
+		} else {
+			$data['validation'] = $this->validator;
+			return redirect()->back()->with('data', $data);
+		}
 	}
 
 	/**

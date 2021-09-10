@@ -43,12 +43,14 @@ $routes->post('/user/auth-login/', 'User::loginAuth');
 $routes->get('/customer', 'Customer::index', ['filter' => 'authGuard']);
 $routes->get('/customer/show/(:id)', 'Customer::show/$1', ['filter' => 'authGuard']);
 $routes->get('/customer/edit/(:id)', 'Customer::edit/$1', ['filter' => 'authGuard']);
+$routes->post('/customer/update/(:id)', 'Customer::update/$1', ['filter' => 'authGuard']);
 
 
 // Chef Routes
 $routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
 $routes->get('/chef/show/(:id)', 'Chef::show/$1', ['filter' => 'authGuard']);
 $routes->get('/chef/edit/(:id)', 'Chef::edit/$1', ['filter' => 'authGuard']);
+$routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------
