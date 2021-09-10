@@ -92,7 +92,7 @@ class User extends ResourceController
 
 	public function login()
 	{
-		echo view('sign-in');
+		echo view('login');
 	}
 
 	public function loginAuth()
