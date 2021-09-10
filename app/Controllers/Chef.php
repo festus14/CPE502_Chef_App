@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Chef as ModelsChef;
+use App\Models\Meal;
 use CodeIgniter\RESTful\ResourceController;
 
 class Chef extends ResourceController
@@ -26,8 +27,12 @@ class Chef extends ResourceController
 	public function show($id = null)
 	{
 		$chefModel = new ModelsChef();
-		$chef = $chefModel->find($id);
-		return view('/chef-dashboard', $chef);
+		$data = $chefModel->find($id);
+
+		$mealModel = new Meal();
+		$data['meals'] = $mealModel->where('chef_id', $id)->findAll();
+
+		return view('/chef-dashboard', $data);
 	}
 
 	/**

@@ -42,13 +42,13 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-menu">Menu</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-meal">Meal</a>
                 </li>
                 <li class="nav-item chefco-tab">
                   <a class="nav-link" href="<?php echo base_url(); ?>/chef-order">Orders</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="">Recicipes</a>
+                  <a class="nav-link" href="">Recipes</a>
                 </li>
               </ul>
 
@@ -60,9 +60,9 @@
 
     <div class="container">
       <div class="navbar my-3">
-        <h1>Resturant Menu</h1>
+        <h1>Resturant Meal</h1>
         <div class="my-2 my-lg-0">
-          <a class="btn custom-btn my-3" type="button" href="<?php echo base_url(); ?>/menu/new">Add Menu Item</a>
+          <a class="btn custom-btn my-3" type="button" href="<?php echo base_url(); ?>/meal/new">Add Meal</a>
         </div>
       </div>
 
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="mb-4 btn col-7 custom-btn">Add to menu</button>
+                            <button type="submit" class="mb-4 btn col-7 custom-btn">Add to meal</button>
                         </div>
                     </form>
                 </div>
@@ -125,64 +125,40 @@
       <!-- Modal ends -->
     </div>
     <div class="row m-5 px-5">
-      <div class="col-md-4 col-sm-12 my-3">
-        <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
-        </div>
 
-        <div class="d-block m-2">
-          <div class="d-flex">
-            <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-            <p class="p-1 ml-1">10 mins</p>
+      <!-- <?php if (!empty($meals)) : ?> -->
+
+
+
+        <?php foreach ($meals as $meal) { ?>
+          <div class="col-md-4 col-sm-12 my-3">
+            <div class="text-center">
+              <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+            </div>
+            <div class="d-block m-2">
+              <div class="d-flex">
+                <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
+                <p class="p-1 ml-1">10 mins</p>
+              </div>
+              <p><?php echo $meal['name'] ?></p>
+              <p>N<?php echo $meal['price'] ?></p>
+            </div>
+
+            <div class="d-inline">
+              <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
+              <button type="button" class="btn custom-btn my-1">Delete</button>
+            </div>
           </div>
-          <p>OrderByClientUsername</p>
-          <p>$12.99</p>
-        </div>
+        <?php } ?>
 
-        <div class="d-inline">
-          <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-          <button type="button" class="btn custom-btn my-1">Delete</button>
-        </div>
-      </div>
 
-      <div class="col-md-4 col-sm-12 my-3">
-        <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
-        </div>
-        <div class="d-block m-2">
-          <div class="d-flex">
-            <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-            <p class="p-1 ml-1">10 mins</p>
-          </div>
-          <p>OrderByClientUsername</p>
-          <p>$12.99</p>
-        </div>
-        <!------>
 
-        <div class="d-inline">
-          <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-          <button type="button" class="btn custom-btn my-1">Delete</button>
-        </div>
-      </div>
 
-      <div class="col-md-4 col-sm-12 my-3">
-        <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
-        </div>
-        <div class="d-block m-2">
-          <div class="d-flex">
-            <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-            <p class="p-1 ml-1">10 mins</p>
-          </div>
-          <p>OrderByClientUsername</p>
-          <p>$12.99</p>
-        </div>
+      <!-- <?php endif; ?> -->
 
-        <div class="d-inline">
-          <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-          <button type="button" class="btn custom-btn my-1">Delete</button>
-        </div>
-      </div>
+
+
+
     </div>
     <div class="row footer-row">
       <div class="container">

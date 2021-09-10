@@ -129,7 +129,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="mb-4 btn col-7 custom-btn">Add to menu</button>
+                            <button type="submit" class="mb-4 btn col-7 custom-btn">Add to meal</button>
                         </div>
                     </form>
 

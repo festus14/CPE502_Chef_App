@@ -49,12 +49,8 @@ class Meal extends ResourceController
     {
         helper(['form']);
 
-
-        $session = session();
-        $user_id = $session->get('id');
-
-        $chef = new ChefModel();
-        $chef_details = $chef->find(['user_id' => $user_id]);
+        $chefModel = new ChefModel();
+        $chef = $chefModel->where('user_id', session()->get('id'))->first();
 
         $rules = [
             'name' => 'required|min_length[2]|max_length[50]',
@@ -63,8 +59,6 @@ class Meal extends ResourceController
             'quantity' => 'required',
             'cover' => 'required',
             'price' => 'required',
-            'is_discount' => 'required',
-            'discount' => 'required',
         ];
 
         if ($this->validate($rules)) {
@@ -77,17 +71,17 @@ class Meal extends ResourceController
                 'quantity' => $this->request->getVar('quantity'),
                 'cover' => $this->request->getVar('cover'),
                 'price' => $this->request->getVar('price'),
-                'is_discount' => $this->request->getVar('is_discount'),
-                'discount' => $this->request->getVar('discount'),
-                'chef_id' => $chef_details['id'],
+                'is_discount' => $this->request->getVar('is_discount') ?? false,
+                'discount' => $this->request->getVar('discount') ?? 0,
+                'chef_id' => $chef['id'],
             ];
 
             $meal->save($data);
 
-            return redirect()->to('/chef-menu');
+            return redirect()->to('/chef/show/' . $chef['id']);
         } else {
             $data['validation'] = $this->validator;
-            return view('create-menu', $data);
+            return view('create-meal', $data);
         }
     }
 
