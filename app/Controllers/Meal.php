@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\Meal as MealModel;
+use App\Models\Chef as ChefModel;
 
 
 class Meal extends ResourceController
@@ -25,7 +26,8 @@ class Meal extends ResourceController
      */
     public function show($id = null)
     {
-        //
+        $meal = new MealModel();
+        $data['meal'] = $meal->find($id);
     }
 
     /**
@@ -46,7 +48,12 @@ class Meal extends ResourceController
     {
 		helper(['form']);
         
+        
         $session = session();
+        $user_id = $session->get('id');
+
+        $chef = new ChefModel();
+        $chef_details = $chef->find(['user_id' => $user_id]);
 
         $rules = [
 			'name' => 'required|min_length[2]|max_length[50]',
@@ -71,7 +78,7 @@ class Meal extends ResourceController
 				'price' => $this->request->getVar('price'),
 				'is_discount' => $this->request->getVar('is_discount'),
 				'discount' => $this->request->getVar('discount'),
-				'chef_id' => $session->get('id'),
+				'chef_id' => $chef_details['id'],
             ];
 
             $meal->save($data);
