@@ -55,7 +55,7 @@
 				<div class="container">
 					<div class="row" style="margin-top:30px;">
 						<div class="col-md-5 modal-img">
-							<img src="images/thekids.jpg" style="border-radius:0px;"/>
+							<img src="/assets/images/thekids.jpg" style="border-radius:0px;"/>
 						</div>
 						<div class="col-md-7">
 							<h2 style="font-weight:bold;">Cake</h2>
@@ -144,10 +144,10 @@
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="my_js/jquery-3.4.1.slim.min.js"></script>
+		<script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-		<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-		<script src="my_js/index.js"></script>
+		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+		<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="/assets/my_js/index.js"></script>
 	</body>
 </html>

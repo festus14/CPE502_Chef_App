@@ -132,7 +132,7 @@
 									<div class="container mt-3">
 										<div class="row mb-5">
 											<div class="col-md-5 modal-img">
-												<img src="images/thekids.jpg" class="rounded-0"/>
+												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-3 m-1">
 												<button class="btn btn-danger btn-block">Reject</button>
@@ -142,7 +142,7 @@
 										<!-- SECOND QUANTITY IN THE CART -->
 										<div class="row mt-5">
 											<div class="col-md-5 modal-img">
-												<img src="images/thekids.jpg" class="rounded-0"/>
+												<img src="/assets/images/thekids.jpg" class="rounded-0"/>
 											</div>
 											<div class="col-md-3 m-1">
 												<button class="btn btn-danger btn-block">Reject</button>
@@ -189,11 +189,11 @@
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="my_js/jquery-3.4.1.slim.min.js"></script>
+	<script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-	<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-	<script src="my_js/index.js"></script>
+	<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/my_js/index.js"></script>
 
 </body>
 

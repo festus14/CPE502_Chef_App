@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="boonay launches humanitarian activities, most especially promoting educational activities">
-    <meta name="keywords" content="humanitarian, scholarship, educational, learning, meritocratic scholarship">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="boonay launches humanitarian activities, most especially promoting educational activities">
+  <meta name="keywords" content="humanitarian, scholarship, educational, learning, meritocratic scholarship">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
-    <title>ChefCorner</title>
-    
-  </head>
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+  <title>ChefCorner</title>
+
+</head>
 
 <body>
   <!--Header 1-->
   <nav class="navbar navbar-expand-lg navbar-custom-2 fixed-top">
     <div class="container" style="padding-left:0px;padding-right:0px;flex-wrap:nowrap;">
       <div class="navbar-brand ">
-        <a  class="logo" href="#">ChefCorner</a>
+        <a class="logo" href="<?php echo base_url(); ?>/">ChefCorner</a>
       </div>
       <div class="mt-2">
         <ul class="navbar-nav ml-auto topnav">
           <li class="nav-item chefCorner-nav-item ">
-            <a class="nav-link chefCorner-nav-atag" href="#">Username <i class="pl-1 fa fa-user-circle"></i></a>
+            <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/chef/edit/<?php echo $id ?>"><?php echo $restaurant_name; ?> <i class="pl-1 fa fa-user-circle"></i></a>
           </li>
         </ul>
       </div>
@@ -62,11 +62,11 @@
       <div class="navbar my-3">
         <h1>Resturant Menu</h1>
         <div class="my-2 my-lg-0">
-          <a class="btn custom-btn my-3" type="button" href="<?php echo base_url(); ?>/menu">Add Menu Item</a>
+          <a class="btn custom-btn my-3" type="button" href="<?php echo base_url(); ?>/menu/new">Add Menu Item</a>
         </div>
       </div>
 
-       <!-- Modal starts -->
+      <!-- Modal starts -->
       <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -122,14 +122,14 @@
               </div>
             </div>
         </div> -->
-        <!-- Modal ends -->
+      <!-- Modal ends -->
     </div>
     <div class="row m-5 px-5">
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
-        
+
         <div class="d-block m-2">
           <div class="d-flex">
             <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
@@ -147,7 +147,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -167,7 +167,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="images/cake.png" alt="cake">
+          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -209,11 +209,11 @@
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-  <script src="my_js/jquery-3.4.1.slim.min.js"></script>
+  <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-  <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="my_js/index.js"></script>
+  <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/my_js/index.js"></script>
 </body>
 
 </html>

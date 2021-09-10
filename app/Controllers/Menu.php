@@ -15,7 +15,7 @@ class Menu extends ResourceController
      */
     public function index()
     {
-        return view('create-menu');
+        // 
     }
 
     /**
@@ -35,6 +35,7 @@ class Menu extends ResourceController
      */
     public function new()
     {
+        return view('create-menu');
     }
 
     /**
@@ -44,42 +45,42 @@ class Menu extends ResourceController
      */
     public function create()
     {
-		helper(['form']);
-        
+        helper(['form']);
+
         $session = session();
 
         $rules = [
-			'name' => 'required|min_length[2]|max_length[50]',
-			'description' => 'required|min_length[2]|max_length[200]',
-			'item_category' => 'required|min_length[2]|max_length[50]',
-			'quantity' => 'required',
-			'cover' => 'required',
-			'price' => 'required',
+            'name' => 'required|min_length[2]|max_length[50]',
+            'description' => 'required|min_length[2]|max_length[200]',
+            'item_category' => 'required|min_length[2]|max_length[50]',
+            'quantity' => 'required',
+            'cover' => 'required',
+            'price' => 'required',
             'is_discount' => 'required',
             'discount' => 'required',
         ];
 
-        if($this->validate($rules)){
+        if ($this->validate($rules)) {
             $meal = new MenuModel();
 
             $data = [
-				'name' => $this->request->getVar('name'),
-				'description' => $this->request->getVar('description'),
-				'item_category' => $this->request->getVar('item_category'),
-				'quantity' => $this->request->getVar('quantity'),
-				'cover' => $this->request->getVar('cover'),
-				'price' => $this->request->getVar('price'),
-				'is_discount' => $this->request->getVar('is_discount'),
-				'discount' => $this->request->getVar('discount'),
-				'chef_id' => $session->get('id'),
+                'name' => $this->request->getVar('name'),
+                'description' => $this->request->getVar('description'),
+                'item_category' => $this->request->getVar('item_category'),
+                'quantity' => $this->request->getVar('quantity'),
+                'cover' => $this->request->getVar('cover'),
+                'price' => $this->request->getVar('price'),
+                'is_discount' => $this->request->getVar('is_discount'),
+                'discount' => $this->request->getVar('discount'),
+                'chef_id' => $session->get('id'),
             ];
 
             $meal->save($data);
-            
+
             return redirect()->to('/chef-menu');
-        }else{
+        } else {
             $data['validation'] = $this->validator;
-			return view('create-menu', $data);
+            return view('create-menu', $data);
         }
     }
 
@@ -91,8 +92,8 @@ class Menu extends ResourceController
     public function edit($id = null)
     {
         $meal = new MenuModel();
-		$data['meal'] = $meal->find($id);
-		return view('', $data);
+        $data['meal'] = $meal->find($id);
+        return view('', $data);
     }
 
     /**
@@ -113,7 +114,7 @@ class Menu extends ResourceController
     public function delete($id = null)
     {
         $meal = new MenuModel();
-		$meal->delete($id);
-		return redirect()->to(base_url())->with('status','Meal Deleted Succesfully');
+        $meal->delete($id);
+        return redirect()->to(base_url())->with('status', 'Meal Deleted Succesfully');
     }
 }

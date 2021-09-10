@@ -156,7 +156,7 @@
                   <div class="container mt-3">
                     <div class="row mb-5">
                       <div class="col-md-5 modal-img">
-                        <img src="images/salad.png" class="rounded-circle" />
+                        <img src="/assets/images/salad.png" class="rounded-circle" />
                       </div>
                       <div class="col-md-7 d-flex align-items-center">          
                         <div class="recipe-tag">
@@ -177,7 +177,7 @@
                     <div class="row mt-5">
 
                       <div class="col-md-5 modal-img">
-                        <img src="images/salad.png" class="rounded-circle" />
+                        <img src="/assets/images/salad.png" class="rounded-circle" />
                       </div>
 
                       <div class="col-md-7 d-flex align-items-center">          
@@ -232,11 +232,11 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="my_js/index.js"></script>
+    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/my_js/index.js"></script>
   
   </body>
 </html>

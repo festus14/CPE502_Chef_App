@@ -42,7 +42,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto topnav">
 					<li class="nav-item chefCorner-nav-item ">
-						<a class="nav-link chefCorner-nav-atag" href="<?php echo base_url() ?>/customer/edit/<?php echo $id ?>"><?php echo ($user_name ?? 'username') ?> <img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
+						<a class="nav-link chefCorner-nav-atag" href="<?php echo base_url() ?>/chef/edit/<?php echo $id ?>"><?php echo ($user_name ?? 'username') ?> <img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
 					</li>
 				</ul>
 			</div>
@@ -53,7 +53,7 @@
 
 	<!-- MAIN SECTION -->
 	<div class="container-fluid chefCo-container">
-		<form action="<?php echo base_url() ?>/chef/update/<?php $id ?>" method="post">
+		<form action="<?php echo base_url() ?>/chef/update/<?php echo $id ?>" method="post">
 			<?= csrf_field() ?>
 			<div class="row profile-detail">
 				<div class="container">
@@ -154,11 +154,11 @@
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="my_js/jquery-3.4.1.slim.min.js"></script>
+	<script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-	<script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-	<script src="my_js/index.js"></script>
+	<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/my_js/index.js"></script>
 </body>
 
 </html>

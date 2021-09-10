@@ -54,7 +54,7 @@ $routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']
 
 
 //Menu Routes
-$routes->get('/menu', 'Menu::index');
+$routes->get('/menu/new', 'Menu::new');
 $routes->post('/menu/create', 'Menu::create');
 
 
