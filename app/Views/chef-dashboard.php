@@ -67,7 +67,7 @@
       </div>
 
       <!-- Modal starts -->
-      <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header" style="border-bottom-width:0px;">
@@ -121,7 +121,7 @@
               
               </div>
             </div>
-        </div> -->
+        </div>
       <!-- Modal ends -->
     </div>
     <div class="row m-5 px-5">
@@ -146,7 +146,7 @@
 
             <div class="d-inline">
               <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-              <button type="button" class="btn custom-btn my-1">Delete</button>
+              <a type="button" class="btn custom-btn my-1" href="<?php echo base_url(); ?>/chef/meal/delete<?php echo $meal['id']; ?>" >Delete</a>
             </div>
           </div>
         <?php } ?>

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
+use App\Models\Order as OrderModel;
+
 
 class Order extends ResourceController
 {
@@ -23,7 +25,7 @@ class Order extends ResourceController
      */
     public function show($id = null)
     {
-        //
+           
     }
 
     /**

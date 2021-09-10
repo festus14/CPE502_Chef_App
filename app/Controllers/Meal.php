@@ -92,9 +92,9 @@ class Meal extends ResourceController
      */
     public function edit($id = null)
     {
-        $meal = new MealModel();
-        $data['meal'] = $meal->find($id);
-        return view('', $data);
+        $mealModel = new MealModel();
+        $meal = $mealModel->find($id);
+        return view('', $meal);
     }
 
     /**
@@ -104,7 +104,42 @@ class Meal extends ResourceController
      */
     public function update($id = null)
     {
-        //
+        $chefModel = new ChefModel();
+        $chef = $chefModel->where('user_id', session()->get('id'))->first();
+
+        $mealModel = new MealModel();
+        $meal = $mealModel->where('id',$id)->first();
+        $rules = [
+            'name' => 'required|min_length[2]|max_length[50]',
+            'description' => 'required|min_length[2]|max_length[200]',
+            'item_category' => 'required|min_length[2]|max_length[50]',
+            'quantity' => 'required',
+            'cover' => 'required',
+            'price' => 'required',
+        ];
+
+        if ($this->validate($rules)) {
+            $meal = new MealModel();
+
+            $data = [
+                'name' => $this->request->getVar('name'),
+                'description' => $this->request->getVar('description'),
+                'item_category' => $this->request->getVar('item_category'),
+                'quantity' => $this->request->getVar('quantity'),
+                'cover' => $this->request->getVar('cover'),
+                'price' => $this->request->getVar('price'),
+                'is_discount' => $this->request->getVar('is_discount') ?? false,
+                'discount' => $this->request->getVar('discount') ?? 0,
+                'chef_id' => $chef['id'],
+            ];
+
+            $meal->update($data);
+
+            return redirect()->to('/chef/show/' . $chef['id']);
+        } else {
+            $data['validation'] = $this->validator;
+            return redirect()->back()->with('data', $data);
+        }
     }
 
     /**
@@ -114,8 +149,20 @@ class Meal extends ResourceController
      */
     public function delete($id = null)
     {
-        $meal = new MealModel();
-        $meal->delete($id);
-        return redirect()->to(base_url())->with('status', 'Meal Deleted Succesfully');
+        $session = session();
+        $chefModel = new ChefModel();
+        $chef = $chefModel->where('user_id', session()->get('id'))->first();
+
+        $mealModel = new MealModel();
+        $meal = $mealModel->where('id',$id)->first();
+
+        if($meal['chef_id'] == $chef['id']){
+            $meal->delete();
+			$session->setFlashdata('msg', 'Meal Deleted Succesfully');
+        }else{
+			$session->setFlashdata('msg', 'Unauthorized');
+        }
+
+        return redirect()->back();
     }
 }
