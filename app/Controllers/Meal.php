@@ -3,10 +3,11 @@
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
-use App\Models\Menu as MenuModel;
+use App\Models\Meal as MealModel;
+use App\Models\Chef as ChefModel;
 
 
-class Menu extends ResourceController
+class Meal extends ResourceController
 {
     /**
      * Return an array of resource objects, themselves in array format
@@ -15,7 +16,7 @@ class Menu extends ResourceController
      */
     public function index()
     {
-        return view('create-menu');
+        return view('create-meal');
     }
 
     /**
@@ -25,7 +26,8 @@ class Menu extends ResourceController
      */
     public function show($id = null)
     {
-        //
+        $meal = new MealModel();
+        $data['meal'] = $meal->find($id);
     }
 
     /**
@@ -46,7 +48,12 @@ class Menu extends ResourceController
     {
 		helper(['form']);
         
+        
         $session = session();
+        $user_id = $session->get('id');
+
+        $chef = new ChefModel();
+        $chef_details = $chef->find(['user_id' => $user_id]);
 
         $rules = [
 			'name' => 'required|min_length[2]|max_length[50]',
@@ -60,7 +67,7 @@ class Menu extends ResourceController
         ];
 
         if($this->validate($rules)){
-            $meal = new MenuModel();
+            $meal = new MealModel();
 
             $data = [
 				'name' => $this->request->getVar('name'),
@@ -71,7 +78,7 @@ class Menu extends ResourceController
 				'price' => $this->request->getVar('price'),
 				'is_discount' => $this->request->getVar('is_discount'),
 				'discount' => $this->request->getVar('discount'),
-				'chef_id' => $session->get('id'),
+				'chef_id' => $chef_details['id'],
             ];
 
             $meal->save($data);
@@ -90,7 +97,7 @@ class Menu extends ResourceController
      */
     public function edit($id = null)
     {
-        $meal = new MenuModel();
+        $meal = new MealModel();
 		$data['meal'] = $meal->find($id);
 		return view('', $data);
     }
@@ -112,7 +119,7 @@ class Menu extends ResourceController
      */
     public function delete($id = null)
     {
-        $meal = new MenuModel();
+        $meal = new MealModel();
 		$meal->delete($id);
 		return redirect()->to(base_url())->with('status','Meal Deleted Succesfully');
     }
