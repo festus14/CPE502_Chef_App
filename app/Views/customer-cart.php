@@ -11,7 +11,7 @@
 		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 		<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+	    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
 		<title>ChefCorner</title>
 	</head>
 
@@ -118,7 +118,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="/assets/images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="images/fufu.jpg" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -147,7 +147,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
+												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;" />
 												<span class="cart-row"style="width:70px;">$1000</span>
 											</li>
 										</ul>
@@ -160,7 +160,7 @@
 										<ul class="nav">
 											<li class="nav-item">
 												<span class="cart-row">
-													<img src="/assets/images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
+													<img src="images/cake.png" style="max-height:200px;height:auto;width:100%;min-width:100px;min-height: 100px;">
 												</span>
 											</li>
 										</ul>
@@ -189,7 +189,7 @@
 												<span class="cart-row" style="width:70px;"><input type="" name="" style="width:30px;"/></span>
 											</li>
 											<li class="nav-item">
-												<img src="/assets/images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
+												<img src="images/cancel.svg" style="position:absolute;right:0px;top:13px;width:15px;height: 15px;"/>
 												<span class="cart-row"style="width:70px;">$1000</span> 
 											</li>                    
 										</ul>

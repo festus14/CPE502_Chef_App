@@ -123,7 +123,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <div class="chef-product">                       
-                        <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                        <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -148,7 +148,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                       <div class="col-md-5 modal-img">
-                                        <img src="/assets/images/fufu.jpg" class="rounded-0"/>
+                                        <img src="images/fufu.jpg" class="rounded-0"/>
                                       </div>
                                       <div class="col-md-7">          
                                            <h2 class="modal-item-h2">Art of war</h2>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">                      
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
                          <h6>Order by <span>Shola</span></h6>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o p-1"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>
@@ -211,7 +211,7 @@
 
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
                      <div class="chef-product">
-                         <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
+                         <div><img src="images/fufu.jpg" class="chef-item-img"></div>  
                          <h5 class="chef-item-h5">Fufu</h5>
                          <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6> 
                          <h6>Order by <span>Shola</span></h6>

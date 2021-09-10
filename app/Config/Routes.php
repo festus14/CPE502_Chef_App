@@ -47,6 +47,12 @@ $routes->get('/customer/edit/(:id)', 'Customer::edit/$1', ['filter' => 'authGuar
 
 // Chef Routes
 $routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
+//menu
+$routes->get('/menu', 'Menu::index');
+$routes->post('/menu/create', 'Menu::create');
+
+$routes->get('/recipe', 'Recipe::index');
+$routes->get('/order', 'Order::index');
 $routes->get('/chef/show/(:id)', 'Chef::show/$1', ['filter' => 'authGuard']);
 $routes->get('/chef/edit/(:id)', 'Chef::edit/$1', ['filter' => 'authGuard']);
 

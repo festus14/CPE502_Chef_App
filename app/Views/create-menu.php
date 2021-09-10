@@ -59,13 +59,13 @@
                         <div class="row flex-nowrap">
                             <ul class="nav nav-pills mb-3 -container">
                                 <li class="nav-item chefco-tab">
-                                    <a class="nav-link" href="">Menu</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>/menu">Menu</a>
                                 </li>
                                 <li class="nav-item chefco-tab">
-                                    <a class="nav-link" href="">Orders</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>/order">Orders</a>
                                 </li>
                                 <li class="nav-item chefco-tab">
-                                    <a class="nav-link" href="">Recicipes</a>
+                                    <a class="nav-link" href="<?php echo base_url(); ?>/recipe">Recicipes</a>
                                 </li>
                             </ul>
 
@@ -75,46 +75,57 @@
             </div>
         </div>
 
-
-        <h1>This page is suppose to be a modal in chef-menu.html, so u don't need it</h1>
         <!------>
         <div class="container-fluid">
             <div class="col-md-8 col-sm-12 mx-auto my-5">
+                <?php if (isset($validation)) : ?>
+                    <div class="alert alert-warning">
+                        <?= $validation->listErrors() ?>
+                    </div>
+                <?php endif; ?>
                 <div class="col-md-12 m-auto py-3">
-                    <form action="#">
+                    <form action="<?php echo base_url(); ?>/menu/create" method="post">
+                        <?= csrf_field() ?>    
                         <div class="form-group mb-4">
                             <label for="name">Name :</label>
-                            <input type="text" class="form-control" id="name">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                         <div class="form-group mb-4">
                             <label for="desc">Description :</label>
-                            <textarea class="form-control" name="desc" id="desc" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
                         </div>
                         <div class="form-group mb-4">
                             <label for="items">Item Category :</label>
-                            <select class="form-control" name="items" id="items">
+                            <select class="form-control" name="item_category" id="item_category">
                                 <option value="drinks">Drinks</option>
                                 <option value="meals">Meals</option>
                             </select>
                         </div>
                         <div class="form-group mb-4">
-                            <label for="uploadProduct">Cover :</label>
-                            <input class="form-control p-5" type="file" name="uploadProduct" id="uploadProduct">
-                        </div>
-
-                        <div class="form-group mb-4">
-                            <label for="time">Time :</label>
-                            <input class="form-control col-3" type="time" name="time" id="time">
+                            <label for="cover">Cover :</label>
+                            <input class="form-control p-5" type="file" name="cover" id="cover">
                         </div>
 
                         <div class="form-group mb-4">
                             <label for="Quantity">Quantity :</label>
-                            <input class="form-control col-3" type="number" name="Quantity" id="Quantity">
+                            <input class="form-control col-3" type="number" name="quantity" id="quantity">
                         </div>
 
                         <div class="form-group mb-4">
                             <label for="Price">Price :</label>
-                            <input class="form-control" type="number" name="Price" id="Price">
+                            <input class="form-control" type="number" name="price" id="price">
+                        </div>
+
+                        <div class="form-group mb-4 form-check">
+                            <input class="form-check-input" type="checkbox" value="is_discount"  name="is_discount" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Discount
+                            </label>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="discount">Discount :</label>
+                            <input class="form-control" type="number" name="discount" id="discount">
                         </div>
 
                         <div class="text-center">

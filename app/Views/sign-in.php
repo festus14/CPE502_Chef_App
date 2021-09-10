@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--  -->
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  -->
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
-    <title>ChefCorner</title>
+<link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/my_css/style.css">
+<title>ChefCorner</title>
 
 </head>
 <!------>
@@ -27,7 +27,7 @@
             <div>
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item chefCorner-nav-item ">
-                        <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/user/sign-up">Sign Up</a>
+                    <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/user/sign-up">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -41,22 +41,14 @@
                     <h1 class="mb-4">Sign in cause you like food</h1>
                     <p class="p-3 mb-3 logo-sample">ChefCorner</p>
                 </div>
-
-                <?php if (session()->getFlashdata('msg')) : ?>
-                    <div class="alert alert-warning">
-                        <?= session()->getFlashdata('msg') ?>
-                    </div>
-                <?php endif; ?>
-
-                <form action="<?php echo base_url(); ?>/user/auth-login" method="post">
-                    <?= csrf_field() ?>
+                <form action="#">
                     <div class="form-group mb-4">
                         <label for="Email">Email :</label>
-                        <input type="email" class="form-control" id="Email" name="email">
+                        <input type="email" class="form-control" id="Email">
                     </div>
                     <div class="form-group mb-4">
                         <label for="Password">Password :</label>
-                        <input type="password" class="form-control" id="Password" name="password">
+                        <input type="password" class="form-control" id="Password">
                     </div>
                     <button type="submit" class="btn custom-btn">Sign in</button>
                 </form>
@@ -71,7 +63,7 @@
             <div class="ChefCorner-ss">
                 <a href="">
                     <img src="/assets/images/facebook1.svg" />
-                </a>
+                </a> 
             </div>
             <div class="ChefCorner-ss">
                 <a href="">
@@ -92,11 +84,11 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <script src="/assets/my_js/jquery-3.4.1.slim.min.js"></script>
+    <script src="my_js/jquery-3.4.1.slim.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
-    <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/my_js/index.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="my_js/index.js"></script>
 </body>
 
 </html>

@@ -61,15 +61,13 @@
     <div class="container">
       <div class="navbar my-3">
         <h1>Resturant Menu</h1>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn custom-btn my-3" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Add Menu Item</button>
-
-        </form>
+        <div class="my-2 my-lg-0">
+          <a class="btn custom-btn my-3" type="button" href="<?php echo base_url(); ?>/menu">Add Menu Item</a>
+        </div>
       </div>
 
        <!-- Modal starts -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header" style="border-bottom-width:0px;">
@@ -123,13 +121,13 @@
               
               </div>
             </div>
-        </div>
+        </div> -->
         <!-- Modal ends -->
     </div>
     <div class="row m-5 px-5">
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         
         <div class="d-block m-2">
@@ -149,7 +147,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">
@@ -169,7 +167,7 @@
 
       <div class="col-md-4 col-sm-12 my-3">
         <div class="text-center">
-          <img class="img-fluid" src="/assets/images/cake.png" alt="cake">
+          <img class="img-fluid" src="images/cake.png" alt="cake">
         </div>
         <div class="d-block m-2">
           <div class="d-flex">

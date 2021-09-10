@@ -156,7 +156,7 @@
                   <div class="container mt-3">
                     <div class="row mb-5">
                       <div class="col-md-5 modal-img">
-                        <img src="/assets/images/salad.png" class="rounded-circle" />
+                        <img src="images/salad.png" class="rounded-circle" />
                       </div>
                       <div class="col-md-7 d-flex align-items-center">          
                         <div class="recipe-tag">
@@ -177,7 +177,7 @@
                     <div class="row mt-5">
 
                       <div class="col-md-5 modal-img">
-                        <img src="/assets/images/salad.png" class="rounded-circle" />
+                        <img src="images/salad.png" class="rounded-circle" />
                       </div>
 
                       <div class="col-md-7 d-flex align-items-center">          
