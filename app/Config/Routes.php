@@ -53,7 +53,7 @@ $routes->get('/chef/edit/(:id)', 'Chef::edit/$1', ['filter' => 'authGuard']);
 $routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']);
 
 
-// menu
+// Meal Routes
 $routes->get('/chef/meal/new', 'Meal::new');
 $routes->post('/chef/meal/create', 'Meal::create');
 $routes->get('/chef/meal/show/(:id)', 'Meal::show/$1');
