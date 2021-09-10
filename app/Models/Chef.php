@@ -16,6 +16,8 @@ class Chef extends Model
 	protected $protectFields        = true;
 	protected $allowedFields        = [
 		'user_id',
+		'user_name',
+		'address',
 		'created_at',
 		'updated_at',
 		'deleted_at'

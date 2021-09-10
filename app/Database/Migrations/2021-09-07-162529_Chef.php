@@ -22,6 +22,14 @@ class Chef extends Migration
 				'constraint' => 5,
 				'null' => true,
 			],
+			'user_name' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+			],
+			'address' => [
+				'type' => 'VARCHAR',
+				'constraint' => '150',
+			],
 		]);
 		$this->forge->addKey('id', true);
 		$this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
