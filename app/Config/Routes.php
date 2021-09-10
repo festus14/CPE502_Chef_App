@@ -44,6 +44,7 @@ $routes->get('/customer', 'Customer::index', ['filter' => 'authGuard']);
 $routes->get('/customer/show/(:id)', 'Customer::show/$1', ['filter' => 'authGuard']);
 $routes->get('/customer/edit/(:id)', 'Customer::edit/$1', ['filter' => 'authGuard']);
 $routes->post('/customer/update/(:id)', 'Customer::update/$1', ['filter' => 'authGuard']);
+$routes->get('/customer/cart', 'Customer::cart', ['filter' => 'authGuard']);
 
 
 // Chef Routes
