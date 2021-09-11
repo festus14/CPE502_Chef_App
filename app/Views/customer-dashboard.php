@@ -129,9 +129,9 @@
                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
                   <h5 class="chef-item-h5"><?php echo $meal['name'] ?></h5>
                   <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
-                  <h6>From <span><?php echo $meal['name'] ?></span></h6>
+                  <h6>From <span><?php echo $meal['restaurant_name'] ?></span></h6>
                   <h6>N <?php echo $meal['price'] ?></h6>
-                  <button class="btn custom-btn cartBtn" onclick="addToCart(<?php echo $meal['id'] ?>)" id='<?php echo $meal['id'] ?>'>Add to Cart</button>
+                  <a class="btn custom-btn cartBtn" href="<?php echo base_url() ?>/cart/add/<?php echo $meal['id'] ?>">Add to Cart</a>
                 </div>
               </div>
             <?php } ?>
@@ -230,8 +230,8 @@
   <script src="/assets/my_js/index.js"></script>
 
   <?php echo "
-  
-  <script> 
+
+  <script>
     var addToCart = (mealId) => {
       if(!localStorage.getItem('carts')){
         const array = [mealId];
@@ -246,7 +246,7 @@
 
         localStorage.setItem('carts', str)
       }
-      
+
       alert('Added to cart');
     }
     </script>"; ?>
