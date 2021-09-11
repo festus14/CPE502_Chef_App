@@ -63,7 +63,7 @@
                             <div class="row flex-nowrap">
                                 <ul class="nav nav-pills mb-3 -container">
                                     <li class="nav-item chefco-tab">
-                                        <a class="nav-link" href="<?php echo base_url(); ?>/chef-meal">Meal</a>
+                                        <a class="nav-link" href="<?php echo base_url(); ?>/chef-meal">Menu</a>
                                     </li>
                                     <li class="nav-item chefco-tab">
                                         <a class="nav-link" href="">Orders</a>

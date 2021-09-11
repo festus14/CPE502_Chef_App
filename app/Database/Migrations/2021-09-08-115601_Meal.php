@@ -55,6 +55,11 @@ class Meal extends Migration
             'discount' => [
                 'type' => 'INT',
             ],
+            'restaurant_name' => [
+                'type' => 'VARCHAR',
+                'constraint' => '150',
+                'null' => true,
+            ],
             'chef_id' => [
                 'type' => 'INT',
                 'unsigned' => true,

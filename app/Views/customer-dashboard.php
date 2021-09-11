@@ -61,10 +61,10 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/customer-dashboard">Meal</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/customer-dashboard">Menu</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/customer-cart">Cart</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/customer/cart">Cart</a>
                 </li>
                 <li class="nav-item chefco-tab">
                   <a class="nav-link" href="<?php echo base_url(); ?>/order-records">Order record</a>
@@ -122,107 +122,20 @@
       <div class="container">
         <div class="row">
 
-
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="chef-product">
-              <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
-              <h5 class="chef-item-h5">Fufu</h5>
-              <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
-              <h6>Order by <span>Shola</span></h6>
-              <h6>$12.99</h6>
-              <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
-
-
-              <!-- Modal start here -->
-              <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-
-
-                    <div class="modal-header border-bottom-0">
-
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-md-5 modal-img">
-                            <img src="/assets/images/fufu.jpg" class="rounded-0" />
-                          </div>
-                          <div class="col-md-7">
-                            <h2 class="modal-item-h2">Art of war</h2>
-                            <h6 class="modal-item-h6">Literature</span></h6>
-                            <h5 class="modal-item-h5">By <span>sun Tzu. 2020</span></h5>
-                            <h1>$40</h1>
-                            <a class="btn custom-btn buy-btn modal-item-btn" href="">Add to cart</a>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="descriptions p-4">
-                      <h4>Description</h4>
-                      <p>
-                        A beautiful set of 120 custom app icons, perfect for iOS 14. Includes wallpapers, instructions, and comes in black, slate, cobalt, and white.
-
-                        Purchase and get lifetime access to all future updates, which will be sent to your email address with a link to download the new files.
-
-                        Three reasons not to buy this:
-                        1. Custom icons open the shortcuts app first (fixed in iOS 14.3 b2!)
-                        2. There's no notification badges on shortcut apps
-                        3. You have to manually set each icon shortcut
-
-                        I can no longer provide individual support or refunds.
-
-
-                        Here's a video on how all of this works.
-                        View the full icon list here. Instructions here.
-                      </p>
-                    </div>
-
-                  </div>
+          <?php if (!empty($meals)) : ?>
+            <?php foreach ($meals as $meal) { ?>
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <div class="chef-product">
+                  <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
+                  <h5 class="chef-item-h5"><?php echo $meal['name'] ?></h5>
+                  <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
+                  <h6>From <span><?php echo $meal['restaurant_name'] ?></span></h6>
+                  <h6>N <?php echo $meal['price'] ?></h6>
+                  <a class="btn custom-btn cartBtn" href="<?php echo base_url() ?>/cart/add/<?php echo $meal['id'] ?>">Add to Cart</a>
                 </div>
               </div>
-              <!-- Modal end here -->
-            </div>
-          </div>
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="chef-product">
-              <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
-              <h5 class="chef-item-h5">Fufu</h5>
-              <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
-              <h6>Order by <span>Shola</span></h6>
-              <h6>$12.99</h6>
-              <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="chef-product">
-              <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
-              <h5 class="chef-item-h5">Fufu</h5>
-              <h6 class="chef-item-h6"><i class="fa fa-clock-o p-1"></i><span>10 mins</span></h6>
-              <h6>Order by <span>Shola</span></h6>
-              <h6>$12.99</h6>
-              <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
-            </div>
-          </div>
-
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <div class="chef-product">
-              <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>
-              <h5 class="chef-item-h5">Fufu</h5>
-              <h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
-              <h6>Order by <span>Shola</span></h6>
-              <h6>$12.99</h6>
-              <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
-            </div>
-          </div>
-
-
+            <?php } ?>
+          <?php endif; ?>
 
         </div>
       </div>
@@ -250,6 +163,62 @@
       </div>
     </div>
 
+    <!-- Modal start here -->
+    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+
+          <div class="modal-header border-bottom-0">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-5 modal-img">
+                  <img src="/assets/images/fufu.jpg" class="rounded-0" />
+                </div>
+                <div class="col-md-7">
+                  <h2 class="modal-item-h2">Art of war</h2>
+                  <h6 class="modal-item-h6">Literature</span></h6>
+                  <h5 class="modal-item-h5">By <span>sun Tzu. 2020</span></h5>
+                  <h1>$40</h1>
+                  <a class="btn custom-btn buy-btn modal-item-btn" href="">Add to cart</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="descriptions p-4">
+            <h4>Description</h4>
+            <p>
+              A beautiful set of 120 custom app icons, perfect for iOS 14. Includes wallpapers, instructions, and comes in black, slate, cobalt, and white.
+
+              Purchase and get lifetime access to all future updates, which will be sent to your email address with a link to download the new files.
+
+              Three reasons not to buy this:
+              1. Custom icons open the shortcuts app first (fixed in iOS 14.3 b2!)
+              2. There's no notification badges on shortcut apps
+              3. You have to manually set each icon shortcut
+
+              I can no longer provide individual support or refunds.
+
+
+              Here's a video on how all of this works.
+              View the full icon list here. Instructions here.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Modal end here -->
+
   </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -259,6 +228,43 @@
   <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
   <script src="/assets/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/my_js/index.js"></script>
+
+  <?php echo "
+
+  <script>
+    var addToCart = (mealId) => {
+      if(!localStorage.getItem('carts')){
+        const array = [mealId];
+        const str = JSON.stringify(array);
+
+        localStorage.setItem('carts', str)
+      }else{
+        const array = JSON.parse(localStorage.getItem('carts'));
+        array.push(mealId);
+        const newArr = [...new Set(array)];
+        const str = JSON.stringify(newArr);
+
+        localStorage.setItem('carts', str)
+      }
+
+      alert('Added to cart');
+    }
+    </script>"; ?>
+
+
+  <script>
+    // var addToCart = (mealId) => {
+    //   if (localStorage.getItem('cart') == undefined) {
+    //     localStorage.setItem('cart', [mealId].toString())
+    //   } else {
+    //     const oldCart = JSON.parse(localStorage.getItem('cart'))
+    //     const newCart = [...new Set(oldCart.push(mealId))]
+    //     localStorage.setItem('cart', newCart.toString())
+    //   }
+
+    //   console.log('Local values...', newCart)
+    // }
+  </script>
 </body>
 
 </html>

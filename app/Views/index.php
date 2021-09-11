@@ -123,7 +123,7 @@
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
                    </div> 
-                   <h6><?php echo $meal['name']?> by <span><?php echo $meal['chef_id']?></span></h6>
+                   <h6><?php echo $meal['name']?> by <span><?php echo $meal['restaurant_name']?></span></h6>
                    <h6><?php echo $meal['price']?></h6>
                    <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
                 <!------>

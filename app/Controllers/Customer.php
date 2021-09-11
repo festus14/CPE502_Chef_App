@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Customer as ModelsCustomer;
+use App\Models\Meal;
 use CodeIgniter\RESTful\ResourceController;
 
 class Customer extends ResourceController
@@ -26,14 +27,19 @@ class Customer extends ResourceController
 	public function show($id = null)
 	{
 		$customerModel = new ModelsCustomer();
-		$customer = $customerModel->find($id);
-		return view('/customer-dashboard', $customer);
+		$data = $customerModel->find($id);
+
+		$mealModel = new Meal();
+		$data['meals'] = $mealModel->findAll();
+
+		return view('/customer-dashboard', $data);
 	}
 
 	/**
 	 * Return a new resource object, with default properties
 	 *
 	 * @return mixed
+	 * 
 	 */
 	public function new()
 	{
@@ -99,5 +105,10 @@ class Customer extends ResourceController
 	public function delete($id = null)
 	{
 		//
+	}
+
+	public function cart()
+	{
+		return view('customer-cart');
 	}
 }

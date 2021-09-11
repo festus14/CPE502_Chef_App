@@ -23,6 +23,7 @@ class Meal extends Model
         'price',
         'is_discount',
         'discount',
+        'restaurant_name',
         'chef_id'
     ];
 

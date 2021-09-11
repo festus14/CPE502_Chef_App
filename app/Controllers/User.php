@@ -91,7 +91,7 @@ class User extends ResourceController
 
 	public function login()
 	{
-		echo view('login');
+		return view('login');
 	}
 
 	public function loginAuth()
