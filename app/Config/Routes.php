@@ -52,12 +52,13 @@ $routes->get('/chef', 'Chef::index', ['filter' => 'authGuard']);
 $routes->get('/chef/show/(:id)', 'Chef::show/$1', ['filter' => 'authGuard']);
 $routes->get('/chef/edit/(:id)', 'Chef::edit/$1', ['filter' => 'authGuard']);
 $routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']);
-
-
-// Meal Routes
+// menu
 $routes->get('/chef/meal/new', 'Meal::new');
 $routes->post('/chef/meal/create', 'Meal::create');
 $routes->get('/chef/meal/show/(:id)', 'Meal::show/$1');
+$routes->put('/chef/meal/update/(:id)', 'Meal::update/$1');
+$routes->delete('/chef/meal/delete/(:id)', 'Meal::delete/$1');
+
 
 
 // Recipe Routes
