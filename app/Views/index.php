@@ -111,17 +111,20 @@
   <div class="container">
      
       <div class="row">
+        <!-- <?php if(!empty($meals)): ?> -->
+        
+          <?php foreach($meals as $meal) {?>
           <div class="col-md-4 d-flex justify-content-center align-items-center">
               <div class="chef-product">                       
                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
                    
-                   <a class="chef-item-h5" style="color:#022b69;" href="<?php echo base_url(); ?>/customer-view-item">Fufu</a>
+                   <a class="chef-item-h5" style="color:#022b69;" href="<?php echo base_url(); ?>/customer-view-item"><?php echo $meal['name']?></a>
                    <div class="d-flex">
                       <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
                       <p class="p-1 m-0">10 mins</p>
                    </div> 
-                   <h6>ItemName by <span>ChefName</span></h6>
-                   <h6>$12.99</h6>
+                   <h6><?php echo $meal['name']?> by <span><?php echo $meal['chef_id']?></span></h6>
+                   <h6><?php echo $meal['price']?></h6>
                    <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
                 <!------>
 
@@ -176,47 +179,9 @@
                   <!-- Modal end here -->
               </div>      
           </div>
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-               <div class="chef-product">                      
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="<?php echo base_url(); ?>/customer-view-item">Fufu</a>
-                   <div class="d-flex">
-                      <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-                      <p class="p-1 m-0">10 mins</p>
-                   </div>
-                   <h6>ItemName by <span>ChefName</span></h6>
-                   <h6>$12.99</h6>
-                   <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>
-              </div>  
-          </div>
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-               <div class="chef-product">
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="<?php echo base_url(); ?>/customer-view-item">Fufu</a>
-                   <div class="d-flex">
-                      <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-                      <p class="p-1 m-0">10 mins</p>
-                   </div>
-                   <h6>ItemName by <span>ChefName</span></h6>
-                   <h6>$12.99</h6>
-                   <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>  
-              </div>  
-          </div>
-
-          <div class="col-md-4 d-flex justify-content-center align-items-center">
-               <div class="chef-product">
-                   <div><img src="/assets/images/fufu.jpg" class="chef-item-img"></div>  
-                   <a class="chef-item-h5" style="color:#022b69;" href="<?php echo base_url(); ?>/customer-view-item">Fufu</a>
-                   <div class="d-flex">
-                      <span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
-                      <p class="p-1 m-0">10 mins</p>
-                   </div> 
-                   <h6>ItemName by <span>ChefName</span></h6>
-                   <h6>$12.99</h6>
-                   <button class="btn custom-btn" data-toggle="modal" data-target="#exampleModal">Buy</button>  
-              </div>  
-          </div>
+          <?php }?>
           
+        <!--  <?php endif; ?> -->
       </div>            
 
   </div>
