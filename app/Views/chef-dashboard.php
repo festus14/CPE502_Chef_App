@@ -126,10 +126,7 @@
     </div>
     <div class="row m-5 px-5">
 
-      <!-- <?php if (!empty($meals)) : ?> -->
-
-
-
+      <?php if (!empty($meals)) : ?>
         <?php foreach ($meals as $meal) { ?>
           <div class="col-md-4 col-sm-12 my-3">
             <div class="text-center">
@@ -150,11 +147,7 @@
             </div>
           </div>
         <?php } ?>
-
-
-
-
-      <!-- <?php endif; ?> -->
+      <?php endif; ?>
 
 
 

@@ -73,6 +73,7 @@ class Meal extends ResourceController
                 'price' => $this->request->getVar('price'),
                 'is_discount' => $this->request->getVar('is_discount') ?? false,
                 'discount' => $this->request->getVar('discount') ?? 0,
+                'restaurant_name' => $chef['restaurant_name'],
                 'chef_id' => $chef['id'],
             ];
 
