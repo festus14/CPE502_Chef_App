@@ -6,9 +6,9 @@ use CodeIgniter\Database\Migration;
 
 class Order extends Migration
 {
-    public function up()
-    {
-        $this->db->disableForeignKeyChecks();
+	public function up()
+	{
+		$this->db->disableForeignKeyChecks();
         $this->forge->addField([
             'id' => [
                 'type' => 'INT',
@@ -19,6 +19,8 @@ class Order extends Migration
             'name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '150',
+                'null' => true,
+                'unique' => true,
             ],
             'description' => [
                 'type' => 'VARCHAR',
@@ -43,32 +45,32 @@ class Order extends Migration
             ],
             'price' => [
                 'type' => 'INT',
+                'null' => true,
             ],
             'is_discount' => [
                 'type' => 'BOOLEAN',
                 'default' => false,
+                'null' => true
             ],
             'discount' => [
                 'type' => 'INT',
-                'null' => true,
-            ],
-            'status' => [
-                'type' => 'ENUM',
-                'constraint' => ['pending', 'processed', 'rejected'],
-                'default' => 'pending',
             ],
             'restaurant_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '150',
                 'null' => true,
             ],
+			'status' => [
+				'type' => 'ENUM',
+				'constraint' => ['pending', 'rejected', 'processed'],
+			],
             'chef_id' => [
                 'type' => 'INT',
                 'unsigned' => true,
                 'constraint' => 5,
                 'null' => true,
             ],
-            'customer_name' => [
+            'user_name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '150',
                 'null' => true,
@@ -83,14 +85,14 @@ class Order extends Migration
             'updated_at datetime default current_timestamp on update current_timestamp',
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('chef_id', 'chefs', 'id');
-        $this->forge->addForeignKey('customer_id', 'customers');
+        $this->forge->addForeignKey('chef_id', 'chefs', 'id', 'CASCADE');
+        $this->forge->addForeignKey('customer_id', 'customers', 'id', 'CASCADE');
         $this->forge->createTable('orders');
         $this->db->enableForeignKeyChecks();
-    }
+	}
 
-    public function down()
-    {
-        $this->forge->dropTable('orders');
-    }
+	public function down()
+	{
+		$this->forge->dropTable('orders');
+	}
 }
