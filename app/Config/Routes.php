@@ -56,11 +56,11 @@ $routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']
 
 
 // Meal Routes
-$routes->get('/chef/meal/new', 'Meal::new');
-$routes->post('/chef/meal/create', 'Meal::create');
-$routes->get('/chef/meal/show/(:id)', 'Meal::show/$1');
-$routes->put('/chef/meal/update/(:id)', 'Meal::update/$1');
-$routes->delete('/chef/meal/delete/(:id)', 'Meal::delete/$1');
+$routes->get('/chef/meal/new', 'Meal::new', ['filter' => 'authGuard']);
+$routes->post('/chef/meal/create', 'Meal::create', ['filter' => 'authGuard']);
+$routes->get('/chef/meal/show/(:id)', 'Meal::show/$1', ['filter' => 'authGuard']);
+$routes->put('/chef/meal/update/(:id)', 'Meal::update/$1', ['filter' => 'authGuard']);
+$routes->delete('/chef/meal/delete/(:id)', 'Meal::delete/$1', ['filter' => 'authGuard']);
 
 
 // Recipe Routes
