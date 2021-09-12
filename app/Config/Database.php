@@ -33,9 +33,9 @@ class Database extends Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'festus',
-		'password' => 'festus-password',
-		'database' => 'chef_app_new',
+		'username' => 'tobey',
+		'password' => 'tobey',
+		'database' => 'chef',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

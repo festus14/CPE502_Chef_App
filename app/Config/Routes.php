@@ -45,7 +45,8 @@ $routes->get('/customer', 'Customer::index', ['filter' => 'authGuard']);
 $routes->get('/customer/show/(:id)', 'Customer::show/$1', ['filter' => 'authGuard']);
 $routes->get('/customer/edit/(:id)', 'Customer::edit/$1', ['filter' => 'authGuard']);
 $routes->post('/customer/update/(:id)', 'Customer::update/$1', ['filter' => 'authGuard']);
-$routes->get('/customer/cart', 'Customer::cart', ['filter' => 'authGuard']);
+$routes->get('/customer/cart/(:id)', 'Customer::cart/$1', ['filter' => 'authGuard']);
+$routes->get('/customer/order/(:id)', 'Customer::order/$1', ['filter' => 'authGuard']);
 
 
 // Chef Routes
@@ -69,10 +70,14 @@ $routes->get('/recipe', 'Recipe::index');
 
 // Order Routes
 $routes->get('/order', 'Order::index', ['filter' => 'authGuard']);
-$routes->get('/order/create', 'Order::create', ['filter' => 'authGuard']);
+$routes->get('/order/create/(:id)', 'Order::create/$1', ['filter' => 'authGuard']);
+$routes->get('/order/delete/(:id)', 'Order::delete/$1', ['filter' => 'authGuard']);
+$routes->get('/order/accept/(:id)', 'Order::accept/$1', ['filter' => 'authGuard']);
+$routes->get('/order/reject/(:id)', 'Order::reject/$1', ['filter' => 'authGuard']);
 
 // Cart Routes
 $routes->get('/cart/add/(:id)', 'Cart::add/$1', ['filter' => 'authGuard']);
+$routes->get('/cart/remove/(:id)', 'Cart::remove/$1', ['filter' => 'authGuard']);
 
 
 /*

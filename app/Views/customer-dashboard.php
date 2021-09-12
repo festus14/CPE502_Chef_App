@@ -45,7 +45,7 @@
         <ul class="navbar-nav ml-auto topnav">
 
           <li class="nav-item chefCorner-nav-item ">
-            <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/customer/edit/<?php echo $id ?>"><?php echo $user_name; ?> <img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
+            <a class="nav-link chefCorner-nav-atag" href="<?php echo base_url(); ?>/customer/edit/<?php echo $id ?>"><?php echo $user_name ?? 'username'; ?> <img src="/assets/images/user.svg" style="width:17px; height: 17px;margin:0px 0px 3px 3px;" /></a>
           </li>
 
         </ul>
@@ -61,13 +61,13 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/customer-dashboard">Menu</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/customer/show/<?php echo $id; ?>">Meals</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/customer/cart">Cart</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/customer/cart/<?php echo $id; ?>">Cart</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/order-records">Order record</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/customer/order/<?php echo $id; ?>">Orders</a>
                 </li>
               </ul>
 

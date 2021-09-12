@@ -42,14 +42,14 @@
             <div class="row flex-nowrap">
               <ul class="nav nav-pills mb-3 -container">
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-meal">Meal</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef/show/<?php echo $id; ?>">Meal</a>
                 </li>
                 <li class="nav-item chefco-tab">
-                  <a class="nav-link" href="<?php echo base_url(); ?>/chef-order">Orders</a>
+                  <a class="nav-link" href="<?php echo base_url(); ?>/chef/order/<?php echo $id; ?>">Orders</a>
                 </li>
-                <li class="nav-item chefco-tab">
+                <!-- <li class="nav-item chefco-tab">
                   <a class="nav-link" href="">Recipes</a>
-                </li>
+                </li> -->
               </ul>
 
             </div>
@@ -68,60 +68,60 @@
 
       <!-- Modal starts -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header" style="border-bottom-width:0px;">
-               
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <form action="#">
-                        <div class="form-group mb-4">
-                            <label for="name">Name :</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group mb-4">
-                            <label for="desc">Description :</label>
-                            <textarea class="form-control" name="desc" id="desc" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label for="items">Item Category :</label>
-                            <select class="form-control" name="items" id="items">
-                                <option value="drinks">Drinks</option>
-                                <option value="meals">Meals</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-4">
-                            <label for="uploadProduct">Cover :</label>
-                            <input class="form-control p-5" type="file" name="uploadProduct" id="uploadProduct">
-                        </div>
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="border-bottom-width:0px;">
 
-                        <div class="form-group mb-4">
-                            <label for="time">Time :</label>
-                            <input class="form-control col-3" type="time" name="time" id="time">
-                        </div>
-
-                        <div class="form-group mb-4">
-                            <label for="Quantity">Quantity :</label>
-                            <input class="form-control col-3" type="number" name="Quantity" id="Quantity">
-                        </div>
-
-                        <div class="form-group mb-4">
-                            <label for="Price">Price :</label>
-                            <input class="form-control" type="number" name="Price" id="Price">
-                        </div>
-
-                        <div class="text-center">
-                            <button type="submit" class="mb-4 btn col-7 custom-btn">Add to meal</button>
-                        </div>
-                    </form>
-                </div>
-              
-              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="form-group mb-4">
+                  <label for="name">Name :</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group mb-4">
+                  <label for="desc">Description :</label>
+                  <textarea class="form-control" name="desc" id="desc" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="items">Item Category :</label>
+                  <select class="form-control" name="items" id="items">
+                    <option value="drinks">Drinks</option>
+                    <option value="meals">Meals</option>
+                  </select>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="uploadProduct">Cover :</label>
+                  <input class="form-control p-5" type="file" name="uploadProduct" id="uploadProduct">
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="time">Time :</label>
+                  <input class="form-control col-3" type="time" name="time" id="time">
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="Quantity">Quantity :</label>
+                  <input class="form-control col-3" type="number" name="Quantity" id="Quantity">
+                </div>
+
+                <div class="form-group mb-4">
+                  <label for="Price">Price :</label>
+                  <input class="form-control" type="number" name="Price" id="Price">
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="mb-4 btn col-7 custom-btn">Add to meal</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
         </div>
+      </div>
       <!-- Modal ends -->
     </div>
     <div class="row m-5 px-5">
@@ -143,7 +143,7 @@
 
             <div class="d-inline">
               <button type="button" class="btn custom-btn my-1" type="button" type="button" data-toggle="modal" data-target="#exampleModalCenter">Edit</button>
-              <a type="button" class="btn custom-btn my-1" href="<?php echo base_url(); ?>/chef/meal/delete<?php echo $meal['id']; ?>" >Delete</a>
+              <a type="button" class="btn custom-btn my-1" href="<?php echo base_url(); ?>/chef/meal/delete<?php echo $meal['id']; ?>">Delete</a>
             </div>
           </div>
         <?php } ?>

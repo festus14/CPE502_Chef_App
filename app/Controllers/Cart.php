@@ -46,7 +46,6 @@ class Cart extends ResourceController
 	public function add($id = null)
 	{
 		$session = session();
-		// $session->remove('cart');
 
 		if (!$session->has('cart')) {
 			$session->set('cart', []);
