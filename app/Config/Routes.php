@@ -70,6 +70,7 @@ $routes->get('/recipe', 'Recipe::index');
 
 // Order Routes
 $routes->get('/order', 'Order::index', ['filter' => 'authGuard']);
+$routes->get('/order/status/(:status)', 'Order::showByStatus/$processed', ['filter' => 'authGuard']);
 $routes->get('/order/create/(:id)', 'Order::create/$1', ['filter' => 'authGuard']);
 $routes->get('/order/delete/(:id)', 'Order::delete/$1', ['filter' => 'authGuard']);
 $routes->get('/order/accept/(:id)', 'Order::accept/$1', ['filter' => 'authGuard']);

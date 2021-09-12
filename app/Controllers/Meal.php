@@ -56,7 +56,6 @@ class Meal extends ResourceController
             'name' => 'required|min_length[2]|max_length[50]',
             'description' => 'required|min_length[2]|max_length[200]',
             'item_category' => 'required|min_length[2]|max_length[50]',
-            'quantity' => 'required',
             'cover' => 'required',
             'price' => 'required',
         ];

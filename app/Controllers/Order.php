@@ -6,6 +6,7 @@ use App\Models\Chef;
 use App\Models\Customer;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\Order as OrderModel;
+use App\Models\Chef as ChefModel;
 
 
 class Order extends ResourceController
@@ -30,6 +31,22 @@ class Order extends ResourceController
     }
 
     /**
+     * Return the properties of a resource object
+     *
+     * @return mixed
+     */
+    public function showByStatus($status = null)
+    {
+        $chefModel = new ChefModel();
+        $chef = $chefModel->where('user_id', session()->get('id'))->first();
+
+        $orderModel = new OrderModel();
+        $data['order'] = $orderModel->where('status',$status, 'chef_id',$chef)->findAll();
+
+        return view('chef-order', $data);
+    }
+
+    /**
      * Return a new resource object, with default properties
      *
      * @return mixed
@@ -38,6 +55,7 @@ class Order extends ResourceController
     {
         //
     }
+
 
     /**
      * Create a new resource object, from "posted" parameters
@@ -59,7 +77,7 @@ class Order extends ResourceController
                     'name' => $item['name'],
                     'description' => $item['description'],
                     'item_category' => $item['item_category'],
-                    'quantity' => $item['quantity'],
+                    // 'quantity' => $item['quantity'],
                     'cover' => $item['cover'],
                     'price' => $item['price'],
                     'is_discount' => $item['is_discount'] ?? false,
