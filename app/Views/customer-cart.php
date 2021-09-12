@@ -61,13 +61,13 @@
 						<div class="row flex-nowrap">
 							<ul class="nav nav-pills mb-3 -container">
 								<li class="nav-item chefco-tab">
-									<a class="nav-link" href="">Menu</a>
+									<a class="nav-link" href="<?php echo base_url(); ?>/customer/show/<?php echo $id; ?>">Meals</a>
 								</li>
 								<li class="nav-item chefco-tab">
-									<a class="nav-link" href="">Cart</a>
+									<a class="nav-link" href="<?php echo base_url(); ?>/customer/cart/<?php echo $id; ?>">Cart</a>
 								</li>
 								<li class="nav-item chefco-tab">
-									<a class="nav-link" href="">Order record</a>
+									<a class="nav-link" href="<?php echo base_url(); ?>/customer/order/<?php echo $id; ?>">Orders</a>
 								</li>
 							</ul>
 						</div>
@@ -137,7 +137,7 @@
 															<span><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i></span>
 															<p class="p-1 m-0">10 mins</p>
 														</div>
-														<p class="m-0">OrderByClientUsername</p>
+														<p class="m-0"><?php echo $meal['restaurant_name'] ?></p>
 														<p class="m-0">N<?php echo $meal['price'] ?></p>
 													</span>
 												</li>
@@ -193,7 +193,7 @@
 								</form>
 							</div>
 							<div style="display: flex;justify-content:center;">
-								<a class="btn custom-btn" style="padding: 3px 30%" href="<?php echo base_url(); ?>/order/create">Pay</a>
+								<a class="btn custom-btn" style="padding: 3px 30%" href="<?php echo base_url(); ?>/order/create/<?php echo $id ?>">Pay</a>
 							</div>
 						</div>
 					</div>

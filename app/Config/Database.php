@@ -35,7 +35,7 @@ class Database extends Config
 		'hostname' => 'localhost',
 		'username' => 'festus',
 		'password' => 'festus-password',
-		'database' => 'chef_app_new',
+		'database' => 'chef_app',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

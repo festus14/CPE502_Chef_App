@@ -14,7 +14,20 @@ class Order extends Model
     protected $returnType           = 'array';
     protected $useSoftDeletes       = false;
     protected $protectFields        = true;
-    protected $allowedFields        = [];
+    protected $allowedFields        = [
+        'name',
+        'description',
+        'item_category',
+        'quantity',
+        'cover',
+        'price',
+        'is_discount',
+        'discount',
+        'restaurant_name',
+        'chef_id',
+        'customer_name',
+        'customer_id',
+    ];
 
     // Dates
     protected $useTimestamps        = false;

@@ -96,6 +96,7 @@ class User extends ResourceController
 
 	public function loginAuth()
 	{
+
 		$session = session();
 
 		$userModel = new ModelsUser();
@@ -119,6 +120,8 @@ class User extends ResourceController
 				];
 
 				$session->set($ses_data);
+				echo $session->get('id');
+
 				if ($data['role'] == 'chef') {
 					$chefModel = new Chef();
 					$chef = $chefModel->where('user_id', $data['id'])->first();

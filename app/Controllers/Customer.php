@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Customer as ModelsCustomer;
 use App\Models\Meal;
+use App\Models\Order;
 use CodeIgniter\RESTful\ResourceController;
 
 class Customer extends ResourceController
@@ -65,6 +66,7 @@ class Customer extends ResourceController
 	{
 		$customerModel = new ModelsCustomer();
 		$customer = $customerModel->find($id);
+
 		return view('/customer-profile', $customer);
 	}
 
@@ -107,8 +109,22 @@ class Customer extends ResourceController
 		//
 	}
 
-	public function cart()
+	public function cart($id = null)
 	{
-		return view('customer-cart');
+		$customerModel = new ModelsCustomer();
+		$customer = $customerModel->find($id);
+		return view('customer-cart', $customer);
+	}
+
+	public function order($id = null)
+	{
+		$customerModel = new ModelsCustomer();
+		$data = $customerModel->find($id);
+
+		$orderModel = new Order();
+
+		$data['orders'] = $orderModel->where('customer_id', $id)->findAll();
+
+		return view('customer-order', $data);
 	}
 }
