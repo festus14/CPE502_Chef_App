@@ -100,7 +100,15 @@
 											<h6 class="chef-item-h6"><i class="fa fa-clock-o" style="padding: 8px 8px 8px 0px;"></i><span>10 mins</span></h6>
 											<h6>From <span><?php echo $order['restaurant_name'] ?></span></h6>
 											<h6>N <?php echo $order['price'] ?></h6>
-											<a class="btn custom-btn cartBtn" href="<?php echo base_url() ?>/order/delete/<?php echo $order['id'] ?>">Delete</a>
+											<?php if ($order['status'] == 'pending') :  ?>
+												<a class="btn custom-btn cartBtn" href="<?php echo base_url() ?>/order/delete/<?php echo $order['id'] ?>">Delete</a>
+											<?php endif; ?>
+											<?php if ($order['status'] == 'processed') :  ?>
+												<button class="btn custom-btn cartBtn">Accepted</button>
+											<?php endif; ?>
+											<?php if ($order['status'] == 'rejected') :  ?>
+												<button class="btn custom-btn cartBtn">Rejected</button>
+											<?php endif; ?>
 										</div>
 									</div>
 								<?php } ?>

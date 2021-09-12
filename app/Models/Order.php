@@ -27,6 +27,7 @@ class Order extends Model
         'chef_id',
         'customer_name',
         'customer_id',
+        'status',
     ];
 
     // Dates

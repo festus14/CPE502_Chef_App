@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Chef;
 use App\Models\Customer;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\Order as OrderModel;
@@ -65,9 +66,10 @@ class Order extends ResourceController
                     'discount' => $item['discount'] ?? 0,
                     'restaurant_name' => $item['restaurant_name'],
                     'chef_id' => $item['chef_id'],
+                    'customer_id' => $customer['id'],
+                    'user_name' => $customer['user_name'],
+                    'status' => 'pending',
                 ];
-                $data['customer_id'] = $customer['id'];
-                $data['customer_name'] = $customer['user_name'];
                 $order->save($data);
             }
 
@@ -112,5 +114,33 @@ class Order extends ResourceController
         $customer = $customerModel->where('user_id', session()->id)->first();
 
         return redirect()->to('/customer/order/' . $customer['id']);
+    }
+
+    public function accept($id = null)
+    {
+        $order = new OrderModel();
+
+        $data = ['status' => 'processed'];
+
+        $order->update($id, $data);
+
+        $chefModel = new Chef();
+        $chef = $chefModel->where('user_id', session()->id)->first();
+
+        return redirect()->to('/chef/order/' . $chef['id']);
+    }
+
+    public function reject($id = null)
+    {
+        $order = new OrderModel();
+
+        $data = ['status' => 'rejected'];
+
+        $order->update($id, $data);
+
+        $chefModel = new Chef();
+        $chef = $chefModel->where('user_id', session()->id)->first();
+
+        return redirect()->to('/chef/order/' . $chef['id']);
     }
 }
