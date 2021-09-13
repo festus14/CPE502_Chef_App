@@ -109,15 +109,15 @@
 								<form style="flex-wrap: nowrap;display: flex;">
 									<div class="form-check nav-item pr-3">
 										<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-										<label class="form-check-label cart-row" for="flexCheckDefault">Pending</label>
+										<a class="form-check-label cart-row" for="flexCheckDefault" href="<?php echo base_url(); ?>/order/status/pending">Pending</a>
 									</div>
 									<div class="form-check neav-item pr-3">
 										<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-										<label class="form-check-label cart-row" for="flexCheckChecked">Processed</label>
+										<a class="form-check-label cart-row" for="flexCheckChecked" href="<?php echo base_url(); ?>/order/status/processed">Processed</a>
 									</div>
 									<div class="form-check nav-item pr-3">
 										<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-										<label class="form-check-label cart-row" for="flexCheckDefault">Rejected</label>
+										<a class="form-check-label cart-row" for="flexCheckDefault" href="<?php echo base_url(); ?>/order/status/rejected">Rejected</a>
 									</div>
 								</form>
 

@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/', 'Home::show');
 $routes->get('/user/sign-up/', 'User::new');
 $routes->post('/user/create/', 'User::create');
 $routes->get('/user/login/', 'User::login');
@@ -56,11 +57,11 @@ $routes->post('/chef/update/(:id)', 'Chef::update/$1', ['filter' => 'authGuard']
 
 
 // Meal Routes
-$routes->get('/chef/meal/new', 'Meal::new');
-$routes->post('/chef/meal/create', 'Meal::create');
-$routes->get('/chef/meal/show/(:id)', 'Meal::show/$1');
-$routes->put('/chef/meal/update/(:id)', 'Meal::update/$1');
-$routes->delete('/chef/meal/delete/(:id)', 'Meal::delete/$1');
+$routes->get('/chef/meal/new', 'Meal::new', ['filter' => 'authGuard']);
+$routes->post('/chef/meal/create', 'Meal::create', ['filter' => 'authGuard']);
+$routes->get('/chef/meal/show/(:id)', 'Meal::show/$1', ['filter' => 'authGuard']);
+$routes->put('/chef/meal/update/(:id)', 'Meal::update/$1', ['filter' => 'authGuard']);
+$routes->delete('/chef/meal/delete/(:id)', 'Meal::delete/$1', ['filter' => 'authGuard']);
 
 
 // Recipe Routes
@@ -69,6 +70,7 @@ $routes->get('/recipe', 'Recipe::index');
 
 // Order Routes
 $routes->get('/order', 'Order::index', ['filter' => 'authGuard']);
+$routes->get('/order/status/(:status)', 'Order::showByStatus/$processed', ['filter' => 'authGuard']);
 $routes->get('/order/create/(:id)', 'Order::create/$1', ['filter' => 'authGuard']);
 $routes->get('/order/delete/(:id)', 'Order::delete/$1', ['filter' => 'authGuard']);
 $routes->get('/order/accept/(:id)', 'Order::accept/$1', ['filter' => 'authGuard']);
